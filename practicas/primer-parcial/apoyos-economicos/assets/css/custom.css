@@ -1,0 +1,11 @@
+/* your styles go here */
+
+body {
+	font-family: 'Ubuntu', sans-serif !important;
+  	padding-top: 50px;
+  	padding-bottom: 20px;
+}
+
+.tx-white { color: #ffffff !important; }
+
+textarea { resize: none !important; }
