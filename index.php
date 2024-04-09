@@ -5,12 +5,10 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Luis Antonio Linares Ramírez</title>
-      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
-      <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/style.default.css" id="theme-stylesheet">
-      <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+      <link rel="stylesheet" type="text/css" href="public/css/libs/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="public/css/libs/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="templates/portfolio/css/styles.css" id="theme-stylesheet">
    </head>
    <body>
       <div id="all">
@@ -19,14 +17,14 @@
                <!-- Barra Lateral -->
                <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
                   <div class="sidebar-content">
-                     <h1 class="sidebar-heading"> <a href="index.html">Luis Linares</a></h1>
-                     <p class="sidebar-p">Yo soy programador y me encanta hacer lo que mas me gusta que es CREAR.
-                        Creatividad y responsabilidad, hacer las cosas con excelencia y calidad. 
+                     <h1 class="sidebar-heading"> <a href="index.php">Luis Linares</a></h1>
+                     <p class="sidebar-p">Yo soy programador y me encanta CREAR.
+                        Creatividad y responsabilidad, hacer las cosas con excelencia y calidad.
                      </p>
                      <ul class="sidebar-menu">
                         <!--<li><a href="#">Inicio</a></li>-->
-                        <li class="active"><a href="index.html">Portafolio</a></li>
-                        <li><a href="#">Acerca de Mi</a></li>
+                        <li class="active"><a href="index.php">Portafolio</a></li>
+                        <li><a href="#">Acerca de mi</a></li>
                         <li><a href="#">Contacto</a></li>
                      </ul>
                      <p class="social">
@@ -47,14 +45,14 @@
                <div class="col-xs-12 col-sm-8 col-md-9 content-column">
                   <div class="small-navbar visible-xs">
                      <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i></button>
-                     <h1 class="small-navbar-heading"> <a href="index.html">Luis Linares </a></h1>
+                     <h1 class="small-navbar-heading"> <a href="index.php">Luis Linares </a></h1>
                   </div>
                   <div class="grid">
                      <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/primer-parcial/curriculum-vitae/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/cv.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/cv.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4><a href="practicas/primer-parcial/curriculum-vitae/">Curriculum Vitae</a></h4>
@@ -68,7 +66,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/primer-parcial/operaciones-basicas/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/ob.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/ob.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/primer-parcial/operaciones-basicas/">Operaciones Básicas</a></h4>
@@ -82,7 +80,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/primer-parcial/apoyos-economicos/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/ae.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/ae.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/primer-parcial/apoyos-economicos/">Apoyos Económicos</a></h4>
@@ -96,7 +94,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/primer-parcial/agencia-carros/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/ac.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/ac.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/primer-parcial/agencia-carros/">Agencia de Carros</a></h4>
@@ -111,7 +109,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="examenes/primer-parcial/tienda-deportes/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/td.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/td.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="examenes/primer-parcial/tienda-deportes/">Tienda de Deportes</a></h4>
@@ -125,7 +123,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="examenes/primer-parcial/inmobiliaria/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/i.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/i.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="examenes/primer-parcial/inmobiliaria/">Inmobiliaria</a></h4>
@@ -143,7 +141,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/segundo-parcial/tablas-multiplicar/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/tm.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/tm.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/segundo-parcial/tablas-multiplicar/">Tablas de Multiplicar</a></h4>
@@ -157,7 +155,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/segundo-parcial/edades/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/e.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/e.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/segundo-parcial/edades/">Edades</a></h4>
@@ -171,7 +169,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/segundo-parcial/inventario-refaccionaria/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/ir.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/ir.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/segundo-parcial/inventario-refaccionaria/">Inventario Refaccionaria</a></h4>
@@ -185,7 +183,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/segundo-parcial/ventas/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/v.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/v.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/segundo-parcial/ventas/">Ventas</a></h4>
@@ -199,7 +197,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/segundo-parcial/cajero-automatico/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/ca.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/ca.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/segundo-parcial/cajero-automatico/">Cajero Automático</a></h4>
@@ -213,7 +211,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/segundo-parcial/cafeteria/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/c.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/c.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/segundo-parcial/cafeteria/">Cafetería</a></h4>
@@ -227,7 +225,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 masonry-item">
                            <div class="box-masonry">
                               <a href="practicas/segundo-parcial/ferreteria/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
-                                 <img src="assets/images/portafolio/f.jpg" alt="" class="img-responsive">
+                                 <img src="public/images/portafolio/f.jpg" alt="" class="img-responsive">
                               </a>
                               <div class="box-masonry-text text-center">
                                  <h4> <a href="practicas/segundo-parcial/ferreteria/">Ferretería</a></h4>
@@ -245,12 +243,12 @@
             </div>
          </div>
       </div>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      <!--<script type="text/javascript" src="assets/js/jquery.min.js"></script>-->
-      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
-      <script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
-      <script type="text/javascript" src="assets/js/imagesloaded.pkgd.min.js"></script>
-      <script type="text/javascript" src="assets/js/front.js"></script>
+      
+      <script type="text/javascript" src="public/js/libs/jquery.min.js"></script>
+      <script type="text/javascript" src="public/js/libs/bootstrap.min.js"></script>
+      <script type="text/javascript" src="templates/portfolio/js/jquery.scrollTo.min.js"></script>
+      <script type="text/javascript" src="templates/portfolio/js/masonry.pkgd.min.js"></script>
+      <script type="text/javascript" src="templates/portfolio/js/imagesloaded.pkgd.min.js"></script>
+      <script type="text/javascript" src="templates/portfolio/js/front.js"></script>
    </body>
 </html>
