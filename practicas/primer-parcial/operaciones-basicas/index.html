@@ -25,7 +25,7 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="../../../index.html"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a></li>
+                  <li><a href="../../../index.php"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a></li>
                </ul>
             </div>
          </div>
