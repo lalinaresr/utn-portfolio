@@ -106,6 +106,22 @@ $projects = [
         'description' => 'Onceava práctica la cual consistía en simular un sistema completo de una ferretería en el que se tenía la tabla clientes, piezas y ventas. En cada tabla se realizaba el CRUD (Create, Read, Update, Delete). Además de hacer las operaciones pertinentes a la hora de realizar la venta de las piezas.',
         'link' => 'practicas/segundo-parcial/ferreteria/',
         'image' => 'public/images/projects/f.jpg'
+    ],
+    [
+        'id' => 14,
+        'type' => 'examen',
+        'title' => 'Producción',
+        'description' => 'Examen tipo A del segundo parcial el cual consistía en insertar y consultar información acerca de plantas productoras, en las cuales teníamos su nombre, cantidad producida y cantidad defectuosa de cada una. Además de recuperar información como mayor y menor planta productora y defectuosa.',
+        'link' => 'examenes/segundo-parcial/produccion/',
+        'image' => 'public/images/projects/p.jpg'
+    ],
+    [
+        'id' => 15,
+        'type' => 'examen',
+        'title' => 'Pizzería',
+        'description' => 'Examen tipo B del segundo parcial el cual consistía crear un simulador de ventas de pizzas. El usuario seleccionaba su especialidad, tamaño y la cantidad de pizzas que quería y se calculaba un subtotal y total de esa venta. Los datos se almacenaban en forma de orden de pedido para tener el control de esa compra.',
+        'link' => 'examenes/segundo-parcial/pizzeria/',
+        'image' => 'public/images/projects/pi.jpg'
     ]
 ];
 
