@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Inventario Refaccionaria</title>
+      <title>Inventario de refacciones</title>
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
@@ -21,7 +21,7 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand" href="#">Inventario Refaccionaria</a>
+               <a class="navbar-brand" href="#">Inventario de refacciones</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
@@ -37,7 +37,7 @@
                   <div class="panel-body">
                      <table class="table table-responsive table-bordered table-condensed" id="center-table">
                         <tr bgcolor="#014ED8">
-                           <th class="text-center tx-white" colspan="4">Inventario Refaccionaria</th>
+                           <th class="text-center tx-white" colspan="4">Inventario de refacciones</th>
                         </tr>
                         <tr bgcolor="#014ED8">
                            <th class="text-center tx-white">Folio</th>
