@@ -1,38 +1,38 @@
 <?php
 
 /**
- * Variable donde se almacena el nombre completo de quien llene el formulario de datos personales
+ * Variable donde se almacena el nombre completo de quien llene el formulario de información personal
  * @var String
  */
 $fullname = $_POST['fullname'];
 
 /**
- * Variable donde se almacena la fecha de nacimiento de quien llene el formulario de datos personales
+ * Variable donde se almacena la fecha de nacimiento de quien llene el formulario de información personal
  * @var Date
  */
 $birthday = $_POST['birthday'];
 
 /**
- * Variable donde se almacena la direccion de quien llene el formulario de datos personales
+ * Variable donde se almacena la dirección de quien llene el formulario de información personal
  * @var String
  */
 $address = $_POST['address'];
 
 /**
- * Variable donde se almacena el sexo de quien llene el formulario de datos personales
+ * Variable donde se almacena el sexo de quien llene el formulario de información personal
  * @var char
  */
 $sex = $_POST['sex'];
 
 /**
- * Variable donde se almacena el numero de telefono de quien llene el formulario de datos personales
+ * Variable donde se almacena el numero de teléfono de quien llene el formulario de información personal
  * @var int
  */
 $phone = $_POST['phone'];
 
 /**
- * Variable donde se almacena el correo electronico de quien llene el formulario de datos personales
- * @var [type]
+ * Variable donde se almacena el correo electrónico de quien llene el formulario de información personal
+ * @var String
  */
 $email = $_POST['email'];
 

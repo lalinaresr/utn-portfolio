@@ -3,13 +3,13 @@
         <div class="panel-body">
             <table class="table table-responsive table-bordered">
                 <?php                
-                    # Verificamos que el valor del campo con name "datosPersonales" exista y no este vacío
+                    # Verificamos que el campo con name "info-tab" exista y no sea nulo
                     if (isset($_POST['info-tab'])) {
                         include_once COMPONENTS_PATH . '/cv/info-response.php';
-                    # Verificamos que el valor del campo con name "educación" exista y no este vacío
+                    # Verificamos que el campo con name "education-tab" exista y no sea nulo
                     } else if (isset($_POST['education-tab'])) {
                         include_once COMPONENTS_PATH . '/cv/education-response.php';
-                    # Verificamos que el valor del campo con name "experiencia" exista y no este vacío
+                    # Verificamos que el campo con name "experience-tab" exista y no sea nulo
                     } else if (isset($_POST['experience-tab'])) {
                         include_once COMPONENTS_PATH . '/cv/experience-response.php';
                     }

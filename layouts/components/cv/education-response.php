@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Variable donde se almacena el bachillerato de quien llene el formulario de educacion
+ * Variable donde se almacena el bachillerato de quien llene el formulario de educación
  * @var String
  */
 $preparatory = $_POST['preparatory'];
 
 /**
- * Variable donde se almacena el nivel superior de quien llene el formulario de educacion
+ * Variable donde se almacena el nivel superior de quien llene el formulario de educación
  * @var String
  */
 $university = $_POST['university'];
 
 /**
- * Variable donde se almacenan los valores de cursos de quien llene el formulario de educacion
+ * Variable donde se almacenan los cursos de quien llene el formulario de educación
  * @var String[]
  */
 $courses = $_POST['courses'];

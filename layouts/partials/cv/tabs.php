@@ -1,5 +1,5 @@
 <div class="container-fluid sr-only">
-    <ul id="tabsMenu" class="nav nav-tabs">
+    <ul id="allTabs" class="nav nav-tabs">
         <li><a href="#mainTab" data-toggle="tab">Inicio</a></li>
         <li><a href="#infoTab" data-toggle="tab">Información</a></li>
         <li><a href="#educationTab" data-toggle="tab">Educación</a></li>

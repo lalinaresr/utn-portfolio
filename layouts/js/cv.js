@@ -8,22 +8,22 @@ jQuery(document).ready(function ($) {
 
 	$("#btn-info-show").on('click', function (e) {
 		e.preventDefault();
-		$('#tabsMenu a[href="#infoTab"]').tab('show');
+		$('#allTabs a[href="#infoTab"]').tab('show');
 	});
 
 	$("#btn-education-show").on('click', function (e) {
 		e.preventDefault();
-		$('#tabsMenu a[href="#educationTab"]').tab('show');
+		$('#allTabs a[href="#educationTab"]').tab('show');
 	});
 	
 	$("#btn-experience-show").on('click', function (e) {
 		e.preventDefault();
-		$('#tabsMenu a[href="#experienceTab"]').tab('show');
+		$('#allTabs a[href="#experienceTab"]').tab('show');
 	});
 
 	$(".btn-back").on('click', function (e) {
 		e.preventDefault();
-		$('#tabsMenu a[href="#mainTab"]').tab('show');
+		$('#allTabs a[href="#mainTab"]').tab('show');
 	});
 
 	$('.btn-education-tab').click(function () {
