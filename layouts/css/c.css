@@ -1,0 +1,724 @@
+/* ------------------------------------------------------------------
+Theme:  Coffee Shop - Bootstrap Template
+Author: Marija Zaric
+------------------------------------------------------------------ */
+
+/* ----------------------------------------------------
+	 GLOBAL STYLES
+------------------------------------------------------- */
+
+
+body {
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    /* background-color: #EEEEEE !important; */
+    background-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+p {
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: background-color .2s linear, color .2s linear;
+    -moz-transition: background-color .2s linear, color .2s linear;
+    -o-transition: background-color .2s linear, color .2s linear;
+    -ms-transition: background-color .2s linear, color .2s linear;
+    transition: background-color .2s linear, color .2s linear;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #b6946c;
+}
+
+
+.logo {
+    margin: -6px auto;
+}
+
+.sociallist-home {
+    color: white;
+    font-size: 1.7em;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.sociallist-inner {
+    color: white;
+    font-size: 1.7em;
+    padding-top: 70px;
+    padding-bottom: 25px;
+}
+
+.icon {
+    margin-left: 9px;
+}
+
+.our-story-pic {
+    margin-top: 48px;
+    border: 4px solid white;
+}
+
+.menu-picture1 {
+    margin-top: 45px;
+    margin-bottom: 80px;
+    border: 4px solid white;
+}
+
+.menu-picture2 {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    border: 4px solid white;
+}
+
+.menu-picture3-doc {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    border: 4px solid white;
+}
+
+
+.copyright {
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+    font-size: 0.7em;
+    display: block;
+    margin-top: 15px;
+}
+
+.margin-top {
+    margin-top: 53px;
+}
+
+
+/* ----------------------------------------------------
+	 BUTTONS
+------------------------------------------------------- */
+
+
+.btn {
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #b1845d;
+    margin-top: 0;
+    border: none;
+    background-color: transparent;
+    padding: 12px 20px;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.main-btn {
+    background-color: #ae895c;
+    color: white;
+    border: 1px solid #ae895c;
+    margin-top: 34px;
+    border-radius: 5px;
+}
+
+.main-btn:hover {
+    background-color: #b6946c;
+    color: white;
+}
+
+
+/* ----------------------------------------------------
+	 MAIN BANNER WITH TEXT ON HOME PAGE
+------------------------------------------------------- */
+
+
+.banner {
+    background: url(../../../layouts/images/c/site/main-banner.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+}
+
+.banner-info h1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    color: #f8f5f1;
+    font-size: 2em;
+    line-height: 1.4em;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 50px;
+    letter-spacing: 1px;
+}
+
+.banner-info h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+    font-size: 1.6em;
+    line-height: 1.4em;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.banner-info h2 span {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+    font-size: 1em;
+    display: block;
+    margin-top: 0;
+    padding-bottom: 0;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+
+/* ----------------------------------------------------
+	 INNER BANNER WITH PAGE OUR STORY
+------------------------------------------------------- */
+
+
+.banner-inner {
+    background: url(../../../layouts/images/c/site/inner-banner.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+}
+
+.banner-inner h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+    font-size: 2.3em;
+    line-height: 1.4em;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 57px;
+    letter-spacing: 1px;
+}
+
+
+.banner-inner p {
+    font-family: 'Open Sans', sans-serif;
+    color: #f8f5f1;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 43px;
+}
+
+.banner-inner .text {
+    font-family: 'Open Sans', sans-serif;
+    color: #f8f5f1;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 43px;
+    border-left: 4px solid #ae895c;
+    padding: 12px;
+}
+
+
+/* ----------------------------------------------------
+	 NAVIGATION STYLES
+------------------------------------------------------- */
+
+
+.head-nav {
+    padding: 3em 0em;
+}
+
+.head-nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.head-nav ul li {
+    display: inline-block;
+    margin: 0 .5em;
+}
+
+.head-nav ul li a {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    position: relative;
+    display: inline-block;
+    margin: 10px 8px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.head-nav ul li a:hover {
+    color: #dfcdbe;
+}
+
+.head-nav ul li .current {
+    color: #dfcdbe;
+}
+
+
+/* ----------------------------------------------------
+	 MENU STYLES
+------------------------------------------------------- */
+
+
+.price-list {
+    padding-top: 140px;
+    padding-bottom: 0;
+}
+
+.price-list h4 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    font-weight: 400;
+    color: white;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.price-content {
+    position: relative;
+    display: block;
+    margin-top: 30px;
+}
+
+.price-mainheading {
+    text-align: left;
+    font-weight: 400;
+    color: white;
+    font-size: 2em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    letter-spacing: 0;
+    margin-bottom: 27px;
+    margin-top: 47px;
+}
+
+.price-heading {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    text-align: left;
+    font-weight: 400;
+    color: white;
+    font-size: 1.8em;
+    letter-spacing: 0;
+    border-bottom: 1px dashed #ae895c;
+    padding-bottom: 7px;
+}
+
+
+.description {
+    text-align: left;
+    color: white;
+    width: 82%;
+    margin-bottom: 27px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    padding-top: 14px;
+}
+
+
+.price-item {
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif !important; */
+    color: white;
+    font-size: 0.7em;
+    display: inline;
+    font-weight: 400;
+    right: 0;
+}
+
+
+/* ----------------------------------------------------
+	 GALLERY STYLES
+------------------------------------------------------- */
+
+
+#photos {
+    /* Prevent vertical gaps */
+    line-height: 0;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 3;
+    -moz-column-gap: 0px;
+    column-count: 3;
+    column-gap: 0px;
+}
+
+#photos img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 1200px) {
+    #photos {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (max-width: 1000px) {
+    #photos {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (max-width: 800px) {
+    #photos {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    #photos {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+
+/* ----------------------------------------------------
+	 NEWS STYLES
+------------------------------------------------------- */
+
+
+.news {
+    padding: 0;
+    text-align: center;
+    background: #ae895c;
+}
+
+.new-grids {
+    margin-top: 3em;
+}
+
+.new-grid {
+    padding: 0;
+}
+
+.new-grid1 {
+    padding: 4em 2em;
+    background: #fff;
+}
+
+.new-grid1 h4 {
+    font-size: 1.5em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #5b5b62;
+}
+
+.new-grid1 h5 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.5em;
+    color: #ae895c;
+    text-transform: capitalize;
+    padding: 1em 0;
+}
+
+.new-grid1 p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.8em;
+    margin: 0.5em 0 0;
+    color: #5b5b62;
+}
+
+a.mask {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+}
+
+img.zoom-img {
+    -webkit-transform: scale(1, 1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1, 1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+}
+
+img.zoom-img:hover {
+    -webkit-transform: scale(1.1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 750ms;
+    -moz-transform: scale(1.1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 750ms;
+    overflow: hidden;
+}
+
+.new-grid img {
+    width: 100%;
+}
+
+
+/* ----------------------------------------------------
+	 CONTACT STYLES
+------------------------------------------------------- */
+
+
+.contact {
+    padding: 0;
+    text-align: center;
+}
+
+.contact-grid {
+    padding: 0;
+}
+
+.contact-grid1 {
+    padding: 4em 2em;
+    background: #fff;
+}
+
+.contact-grid1 h4 {
+    font-size: 1.5em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #5b5b62;
+}
+
+.contact-grid1 h5 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.5em;
+    color: #ae895c;
+    padding: 0.9em 0;
+}
+
+.contact-grid1 h5 span {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #ae895c;
+    display: block;
+    margin-top: 16px;
+}
+
+.contact-grid1 h6 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.5em;
+    color: #5b5b62;
+    padding-top: 16px;
+    padding-bottom: 6px;
+}
+
+
+.contact-grid1 p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.8em;
+    margin: 0.3em 0 0;
+    color: #5b5b62;
+}
+
+.contact-grid img {
+    width: 100%;
+}
+
+#map-canvas {
+    height: 400px;
+    width: auto;
+    margin-top: 21px;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    /* Safari 5+ ONLY */
+    ::i-block-chrome,
+    #map-canvas {
+        height: 400px;
+        margin-top: 23px;
+    }
+}
+
+
+/* ----------------------------------------------------
+	 RESPONSIVE STYLES
+------------------------------------------------------- */
+
+
+@media (max-width:2560px) {
+
+    .banner {
+        background: url(../../../layouts/images/c/site/main-banner.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        text-align: center;
+        min-height: 1065px;
+    }
+
+}
+
+@media (max-width:1920px) {
+
+    .banner {
+        background: url(../../../layouts/images/c/site/main-banner.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        text-align: center;
+        min-height: 888px;
+    }
+
+}
+
+@media (max-width:1600px) {
+
+    .banner {
+        background: url(../../../layouts/images/c/site/main-banner.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        text-align: center;
+        min-height: 799px;
+    }
+
+}
+
+@media (max-width:1024px) {
+
+    #map-canvas {
+        height: 217px;
+        width: auto;
+        margin-top: 29px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .head-nav ul li {
+        display: block;
+        float: none;
+    }
+
+    .head-nav ul li a {
+        border-right: none;
+        color: #fff;
+    }
+
+    .head-nav ul {
+        position: absolute;
+        margin: 0;
+        padding: 2% 0;
+        z-index: 999;
+        width: 93%;
+        display: none;
+        text-align: center;
+        background: #ae895c;
+        opacity: 0.9;
+        left: 2em;
+        top: 3em;
+    }
+
+    .head-nav span.menu {
+        display: block;
+        background: none;
+        position: absolute;
+        top: 18px;
+        right: 30px;
+    }
+
+    .head-nav span.menu:before {
+        content: url(../../../layouts/images/c/site/menu.png);
+        color: #FFF;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    #map-canvas {
+        height: 400px;
+        width: auto;
+    }
+
+    .menu-picture1 {
+        margin-bottom: -30px;
+    }
+
+    .banner {
+        min-height: 1080px;
+    }
+
+}
+
+
+@media (max-width:568px) {
+
+    .head-nav ul {
+        width: 90%;
+    }
+
+    .banner {
+        min-height: 800px;
+    }
+
+}
+
+
+@media (max-width:480px) {
+
+    .head-nav ul {
+        width: 88%;
+    }
+
+    .logo {
+        margin: 10px auto;
+    }
+
+}
+
+@media (max-width:320px) {
+
+    .head-nav {
+        padding: 1em 0em;
+    }
+
+    .head-nav ul {
+        width: 82%;
+    }
+
+}
+
+.check {
+    opacity: 0.5;
+    color: #996;
+
+}

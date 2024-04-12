@@ -18,7 +18,7 @@
             <a href="#" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a>
         </p>
         <div class="copyright">
-            <p class="credit">&copy; Todos los Derechos Reservados | Luis Linares 2018.</p>
+            <p class="credit">© Derechos Reservados | Luis Linares 2018.</p>
         </div>
     </div>
 </div>

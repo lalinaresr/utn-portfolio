@@ -1,16 +1,17 @@
+<?php require_once 'config.php'; ?>
+
 <!DOCTYPE html>
-<html lang="">
+<html lang="es">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Apoyos Económicos</title>
-      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.9.2/sweetalert2.min.css">
-      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
-      <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+      <title><?= APP_NAME; ?></title>
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/libs/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/libs/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/libs/sweetalert2.min.css">
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/ae.css">
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/styles.css">
    </head>
    <body>
       <nav class="navbar navbar-default navbar-fixed-top">
@@ -22,11 +23,11 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand" href="#">Estado de México</a>
+               <a class="navbar-brand" href="<?= APP_URL; ?>">Estado de México</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="../../../index.php"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a></li>
+                  <li><a href="<?= SITE_URL; ?>"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a></li>
                </ul>
             </div>
          </div>
@@ -35,10 +36,10 @@
          <div class="container">
             <div class="row">
                <div class="col-md-8">
-                  <img src="assets/images/gobierno/edo.png" class="img-responsive"/>
+                  <img src="<?= LAYOUTS_PATH; ?>/images/ae/edo.png" class="img-responsive"/>
                </div>
                <div class="col-md-4">
-                  <img src="assets/images/gobierno/sedesol.png" class="img-responsive"/>
+                  <img src="<?= LAYOUTS_PATH; ?>/images/ae/sedesol.png" class="img-responsive"/>
                </div>
             </div>
          </div>
@@ -46,7 +47,7 @@
       <div class="container-fluid">
          <div class="row">
             <div class="col-sm-12 col-lg-4">
-               <img class="img-circle center-block" src="assets/images/apoyos/estudiantes.png" alt="Apoyo a Estudiantes" width="140" height="140">
+               <img class="img-circle center-block" src="<?= LAYOUTS_PATH; ?>/images/ae/estudiantes.png" alt="Apoyo a Estudiantes" width="140" height="140">
                <h2 class="text-center">Apoyo a Estudiantes.</h2>
                <p class="text-center">La convocatoria es para niñas, niños y jóvenes que habiten en el Estado de México los cuales  deben tener un promedio superior a 8.5 y ser menores de 18 años para poder ser elegido.</p>
                <p class="text-center">
@@ -54,7 +55,7 @@
                </p>
             </div>
             <div class="col-sm-12 col-lg-4">
-               <img class="img-circle center-block" src="assets/images/apoyos/madres.png" alt="Apoyo a Madres Solteras" width="140" height="140">
+               <img class="img-circle center-block" src="<?= LAYOUTS_PATH; ?>/images/ae/madres.png" alt="Apoyo a Madres Solteras" width="140" height="140">
                <h2 class="text-center">Apoyo a Madres Solteras.</h2>
                <p class="text-center">La convocatoria es para todas las madres solteras que habiten en el Estado de México las cuales deben ser solteras, y tener mínimo un hijo menor a 18 años de edad.</p>
                <p class="text-center">
@@ -62,7 +63,7 @@
                </p>
             </div>
             <div class="col-sm-12 col-lg-4">
-               <img class="img-circle center-block" src="assets/images/apoyos/adultos.png" alt="Apoyo a Adultos Mayores" width="140" height="140">
+               <img class="img-circle center-block" src="<?= LAYOUTS_PATH; ?>/images/ae/adultos.png" alt="Apoyo a Adultos Mayores" width="140" height="140">
                <h2 class="text-center">Apoyo a Adultos Mayores.</h2>
                <p class="text-center">La convocatoria es para todos los adultos mayores hombres o mujeres, pero que habiten en el Estado de México además deben tener más de 70 años para poder ser elegido.</p>
                <p class="text-center">
@@ -72,7 +73,7 @@
          </div>
          <hr>
          <footer>
-            <p class="text-center">&copy; Todos los Derechos Reservados del Estado de México 2018.</p>
+            <p class="text-center">© Derechos Reservados | Estado de México 2018.</p>
          </footer>
       </div>
 
@@ -84,7 +85,7 @@
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-fw fa-times-circle"></i></button>
                   <h4 class="modal-title text-center">Llenar Solicitud Estudiantes</h4>
                </div>
-               <form method="post" action="resultados.php" id="form-apoyo-estudiantes">
+               <form method="post" action="show.php" id="form-apoyo-estudiantes">
                   <div class="modal-body">
                      <input type="hidden" name="estudiante" value="1">
                      <div class="form-group">
@@ -131,7 +132,7 @@
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   <h4 class="modal-title text-center">Llenar Solicitud Madres Solteras</h4>
                </div>
-               <form method="post" action="resultados.php" id="form-apoyo-madres-solteras">
+               <form method="post" action="show.php" id="form-apoyo-madres-solteras">
                   <div class="modal-body">
                      <input type="hidden" name="madre" value="1">
                      <!--<div class="form-group">
@@ -192,7 +193,7 @@
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   <h4 class="modal-title text-center">Llenar Solicitud Adultos Mayores</h4>
                </div>
-               <form method="post" action="resultados.php" id="form-apoyo-adultos-mayores">
+               <form method="post" action="show.php" id="form-apoyo-adultos-mayores">
                   <div class="modal-body">
                      <input type="hidden" name="adulto" value="1">
                      <div class="form-group">
@@ -223,11 +224,10 @@
       </div>
       <!-- FIN Formulario para Apoyo a Adultos Mayores -->
 
-
-      <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-      <script type="text/javascript" src="assets/js/jquery.form.min.js"></script>
-      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>     
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.9.2/sweetalert2.min.js"></script>     
-      <script type="text/javascript" src="assets/js/source.js"></script>     
+      <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/jquery.min.js"></script>
+      <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/jquery.form.min.js"></script>
+      <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/bootstrap.min.js"></script>
+      <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/sweetalert2.min.js"></script>
+      <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/ae.js"></script>
    </body>
 </html>

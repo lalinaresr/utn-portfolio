@@ -1,73 +1,85 @@
-<!DOCTYPE html>
-<html lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Pizzería</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/materialize.css">
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	</head>
-	<body class="blue-grey lighten-5">
-		<nav>
-		    <div class="nav-wrapper light-green lighten-2">
-		    	<a href="produccion.php" class="brand-logo">Pizzería</a>
-		      	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-		      	<ul class="right hide-on-med-and-down">
-		        	<li><a href="../../../index.php"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a></li>
-		      	</ul>
-		      	<ul class="side-nav" id="mobile-demo">
-		        	<li><a href="../../../index.php">Regresar</a></li>
-		      	</ul>
-		    </div>
-		</nav>
+<?php require_once 'config.php'; ?>
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?= APP_NAME; ?></title>
+	<link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/libs/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/libs/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/p.css">
+	<link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/styles.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
-			<div class="row mt-20">				
-				<div class="col m12 s12">
-					<div class="card-panel">
-						<form action="realizarCompra.php" method="post">
-							<div class="input-field">
-								<select id="tamano" name="tamano" class="validate" required="true">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="<?= APP_URL; ?>"><?= APP_NAME; ?></a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="<?= SITE_URL; ?>"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row mt-20">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<form action="comprar.php" method="post">
+							<div class="form-group">
+								<label for="tamano">Tamaño</label>
+								<select id="tamano" name="tamano" class="form-control" required="true">
 									<option disabled selected value>Seleccione el tamaño</option>
 									<option value="grande">Grande $90</option>
 									<option value="mediana">Mediana $70</option>
 									<option value="chica">Chica $40</option>
 								</select>
-								<label for="tamano">Tamaño</label>
 							</div>
-							<div class="input-field mt-5">
-								<select id="ingredientes" name="ingredientes" class="validate" required="">
+							<div class="form-group">
+								<label for="ingredientes">Ingredientes</label>
+								<select id="ingredientes" name="ingredientes" class="form-control" required="">
 									<option disabled selected value>Seleccione su especialidad</option>
 									<optgroup label="Sencillas">
-							        	<option value="S1">Hawaiana</option>
-							        	<option value="S2">Peperoni</option>
-							        	<option value="S3">Carnes Frias</option>
-							      	</optgroup>
-							      	<optgroup label="Especiales">
-							        	<option value="E1">Mexicana</option>
-							        	<option value="E2">Suprema</option>
-							        	<option value="E3">Tres Quesos</option>
-							      	</optgroup>
+										<option value="S1">Hawaiana</option>
+										<option value="S2">Peperoni</option>
+										<option value="S3">Carnes Frias</option>
+									</optgroup>
+									<optgroup label="Especiales">
+										<option value="E1">Mexicana</option>
+										<option value="E2">Suprema</option>
+										<option value="E3">Tres Quesos</option>
+									</optgroup>
 								</select>
-								<label for="ingredientes">Ingredientes</label>
 							</div>
-							<div class="input-field">
-					        	<input type="text" id="cantidad" name="cantidad" class="validate" required="" min="0" max="1000" step="1.0">
-					          	<label for="cantidad">Cantidad:</label>
-					        </div>
+							<div class="form-group">
+								<label for="cantidad">Cantidad:</label>
+								<input type="text" id="cantidad" name="cantidad" class="form-control" required="" min="0" max="1000" step="1.0">
+							</div>
 
-					        <button type="submit" class="btn light-green lighten-2">Comprar</button>
+							<button type="submit" class="btn btn-primary">Comprar</button>
 						</form>
 					</div>
 				</div>
-			</div>		
-		</div>				
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/bootstrap.min.js"></script>
+</body>
 
-		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
-		<script type="text/javascript" src="assets/js/custom.js"></script>
-	</body>
 </html>

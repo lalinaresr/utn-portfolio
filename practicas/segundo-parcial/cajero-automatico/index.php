@@ -1,15 +1,16 @@
+<?php require_once 'config.php'; ?>
+
 <!DOCTYPE html>
-<html lang="">
+<html lang="es">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Cajero Automático</title>
-      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
-      <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+      <title><?= APP_NAME; ?></title>
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/libs/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/libs/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/ca.css">
+      <link rel="stylesheet" type="text/css" href="<?= LAYOUTS_PATH; ?>/css/styles.css">
    </head>
    <body>
       <nav class="navbar navbar-default navbar-fixed-top">
@@ -21,11 +22,11 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand" href="#">Cajero Automático</a>
+               <a class="navbar-brand" href="<?= APP_URL; ?>"><?= APP_NAME; ?></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="../../../index.php"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a></li>
+                  <li><a href="<?= SITE_URL; ?>"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a></li>
                </ul>
             </div>
          </div>
@@ -59,13 +60,13 @@
                            $tipoMovimiento = "";
                            for($i = 0; $i < count($transacciones); $i++){
                               if(strcmp($transacciones[$i]['tipo_movimiento'], 'D') == 0) {
-                           $saldoFinal = $saldoFinal + $transacciones[$i]['cantidad']; 
-                           /* $saldoFinal = $transacciones[$i]['saldo'] + $transacciones[$i]['cantidad']; */
-                           $tipoMovimiento = "Depósito";
-                           } else if(strcmp($transacciones[$i]['tipo_movimiento'], 'R') == 0) {
-                           $saldoFinal = $saldoFinal - $transacciones[$i]['cantidad'];
-                           /* $saldoFinal = $transacciones[$i]['saldo'] - $transacciones[$i]['cantidad']; */
-                           $tipoMovimiento = "Retiro";
+                              $saldoFinal = $saldoFinal + $transacciones[$i]['cantidad']; 
+                              /* $saldoFinal = $transacciones[$i]['saldo'] + $transacciones[$i]['cantidad']; */
+                              $tipoMovimiento = "Depósito";
+                              } else if(strcmp($transacciones[$i]['tipo_movimiento'], 'R') == 0) {
+                              $saldoFinal = $saldoFinal - $transacciones[$i]['cantidad'];
+                              /* $saldoFinal = $transacciones[$i]['saldo'] - $transacciones[$i]['cantidad']; */
+                              $tipoMovimiento = "Retiro";
                            }
                         ?>
                         <tr>
@@ -84,10 +85,10 @@
       </div>
       <footer class="footer">
          <div class="container">
-            <p class="text-muted">© Todos los Derechos Reservados | Luis Linares 2018.</p>
+            <p class="text-muted">© Derechos Reservados | Luis Linares 2018.</p>
          </div>
       </footer>
-      <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>     
+      <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/jquery.min.js"></script>
+      <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/bootstrap.min.js"></script>    
    </body>
 </html>
