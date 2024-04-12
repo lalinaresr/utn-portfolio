@@ -16,7 +16,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Calculadora',
         'description' => 'Segunda práctica la cual consistía en crear un formulario en el cual pediremos 2 valores numéricos, y con esto realizar las operaciones básicas comúnmente conocidas (Suma, Resta, Producto, División, Residuo, Creciente, Decreciente).',
-        'link' => 'practicas/primer-parcial/calculadora/',
+        'link' => 'practicas/primer-parcial/calculadora',
         'image' => 'public/images/projects/ob.png'
     ],
     [
