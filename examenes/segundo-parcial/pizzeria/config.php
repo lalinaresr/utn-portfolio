@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('America/Mexico_City');
+
 const APP_NAME = 'Pizzería';
 
 const APP_AUTHOR = 'Luis Linarez <dev.lalinaresr@gmail.com>';

@@ -1,17 +1,10 @@
 <?php
 
+date_default_timezone_set('America/Mexico_City');
+
 const APP_NAME = 'Cafetería';
 
 const APP_AUTHOR = 'Luis Linarez <dev.lalinaresr@gmail.com>';
-
-define('CONNECTION', [
-    'HOSTNAME' => null,
-    'USERNAME' => null,
-    'PASSWORD' => null,
-    'DATABASE' => null,
-    'PORT' => null,
-    'SOCKET' => null
-]);
 
 const SITE_URL = 'http://127.0.0.1:8000';
 

@@ -4,15 +4,6 @@
 	require_once 'config.php';
 	require_once LIBRARIES_PATH . '/fpdf/fpdf.php';
 
-	/**
-	 * 
-	 */
-	date_default_timezone_set('America/Mexico_City');
-
-
-	/**
-	 * summary
-	 */
 	class ImprimirPago extends FPDF	{
 		// Cabecera de página
 		public function Header() {
