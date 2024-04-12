@@ -8,7 +8,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Curriculum Vitae',
         'description' => 'Primera práctica la cual consistía en crear un Curriculum Vitae y diseñamos 3 formularios los cuales eran para datos personales, educación y experiencia en ellos solo ingresábamos datos para después solo imprimirlos.',
-        'link' => 'practicas/primer-parcial/curriculum-vitae/',
+        'link' => 'practicas/primer-parcial/curriculum-vitae',
         'image' => 'public/images/projects/cv.png'
     ],
     [
