@@ -1,115 +1,134 @@
-<?php  
-	/**
-	 * Verificamos que el valor del campo con name "estudiante" exista y no este vacio
-	 * para poder entrar en este apartado y mostrar los datos que ingresamos en estudiante
-	 */
-	if (isset($_POST['estudiante']) &&
-		!empty($_POST['estudiante'])) {
-		
-		/**
-		 * Variable donde almacenamos el nombre del estudiante que se esta registrando
-		 * @var String
-		 */
-		$nombreCompleto = $_POST['nombre_completo'];
-		
-		/**
-		 * Variable donde almacenamos el estado donde vive el estudiante que se esta registrando
-		 * @var String
-		 */
-		$estadoEstudiante = $_POST['estado_estudiante'];
+<?php
 
-		/**
-		 * Variable donde almacenamos la calificacion del estudiante que se esta registrando
-		 * @var double
-		 */
-		$calificacion = $_POST['calificacion'];
-
-		/**
-		 * Variable donde almacenamos la edad del estudiante que se esta registrando
-		 * @var integer
-		 */
-		$edadEstudiante = $_POST['edad_estudiante'];
-
-		if ($edadEstudiante >= 0 && $edadEstudiante <= 17) { /* Validamos que la edad no pase de los 17 años para ser acreditado */
-			if ($calificacion >= 8.5 && $calificacion <= 10) { /* Validamos que su calificacion sea mayor a 8.5 y menor igual a 10 para ser acreditado */
-				echo json_encode(
-						array(
-							'mensaje' => 'ExitoEstudiante',
-							'nombreCompleto' => $nombreCompleto,
-							'estadoEstudiante' => $estadoEstudiante,
-							'calificacion' => $calificacion,
-							'edad' => $edadEstudiante
-						)
-					);	/* Imprimimos un json de exito para devolverlo con Ajax a las ventanas de mensaje */
-			} else {
-				echo json_encode(array('mensaje' => 'ErrorEstudiante')); /* Imprimimos un json de error para devolverlo con Ajax a las ventanas de mensaje */
-			}		
-		} else {
-			echo json_encode(array('mensaje' => 'ErrorEstudiante')); /* Imprimimos un json de error para devolverlo con Ajax a las ventanas de mensaje */
-		}
+# Verificamos que el valor del campo con name "students-form" exista y no sea nulo
+if (isset($_POST['students-form'])) {
 
 	/**
-	 * Verificamos que el valor del campo con name "madre" exista y no este vacio
-	 * para poder entrar en este apartado y mostrar los datos que ingresamos en madre
+	 * Variable donde almacenamos el nombre del estudiante que se esta registrando
+	 * @var String
 	 */
-	} else if (isset($_POST['madre']) &&
-			  !empty($_POST['madre'])) {
-
-		/* $sexo = $_POST['sexo']; */
-
-		/**
-		 * Variable donde almacenamos el estado civil de la madre soltera que se esta registrando
-		 * @var String
-		 */
-		$estadoCivil = $_POST['estado_civil'];
-
-		/**
-		 * Variable donde almacenamos el estado donde vive la madre soltera que se esta registrando
-		 * @var String
-		 */
-		$estadoMadreSoltera = $_POST['estado_madre_soltera'];
-
-		/**
-		 * Variable donde almacenamos si tiene hijo(s) menor(es) de edad la madre soltera que se esta registrando
-		 * @var String
-		 */
-		$hijoMenorEdad = $_POST['hijo_menor_edad'];
-
-		/**
-		 * Variable donde almacenamos la edad del hijo menor de edad si es que tiene la madre soltera que se esta registrando
-		 * @var String
-		 */
-		$edadHijo = $_POST['edad_hijo'];
-
-		if ($edadHijo >= 0 && $edadHijo <= 17) { // Validamos que su hijo realmente sea menor de edad
-			echo 'ExitoMadreSoltera'; //Imprimimos el mensaje de exito para retornarlo con Ajax
-		} else {
-			echo 'ErrorMadreSoltera'; //Imprimimos el mensaje de error para retornarlo con Ajax
-		}
+	$fullname = $_POST['fullname'];
 
 	/**
-	 * Verificamos que el valor del campo con name "adulto" exista y no este vacio
-	 * para poder entrar en este apartado y mostrar los datos que ingresamos en adulto
+	 * Variable donde almacenamos el estado residencial del estudiante que se esta registrando
+	 * @var String
 	 */
-	} else if (isset($_POST['adulto']) &&
-			  !empty($_POST['adulto'])) {
+	$state = $_POST['state'];
 
-		/**
-		 * Variable donde almacenamos la edad del adulto mayor que se esta registrando
-		 * @var String
-		 */
-		$estadoAdultoMayor = $_POST['estado_adulto_mayor'];
+	/**
+	 * Variable donde almacenamos la calificación final del estudiante que se esta registrando
+	 * @var double
+	 */
+	$score = $_POST['score'];
 
-		/**
-		 * Variable donde almacenamos la edad del adulto mayor que se esta registrando
-		 * @var String
-		 */
-		$edadAdultoMayor = $_POST['edad_adulto_mayor'];
+	/**
+	 * Variable donde almacenamos la edad del estudiante que se esta registrando
+	 * @var int
+	 */
+	$age = $_POST['age'];
 
-		if ($edadAdultoMayor >= 70 && $edadAdultoMayor <= 200) { // Para ser adulto mayor verificamos que sea mayor de 70 años
-			echo 'ExitoAdultoMayor'; //Imprimimos el mensaje de exito para retornarlo con Ajax
+	# Validamos que la edad no pase de los 17 años para ser acreditado
+	if ($age >= 0 && $age <= 17) {
+		# Validamos que su calificación sea mayor o igual a 8.5 y menor o igual a 10 para ser acreditado
+		if ($score >= 8.5 && $score <= 10) {
+			# Imprimimos un json de éxito para devolverlo con ajax a las ventanas de mensaje
+			echo json_encode([
+				'type' => 'success',
+				'text' => 'Felicidades ' . $fullname . ', has logrado obtener el apoyo de 1000 pesos mexicanos'
+			]);
 		} else {
-			echo 'ErrorAdultoMayor'; //Imprimimos el mensaje de error para retornarlo con Ajax
+			# Imprimimos un json de error para devolverlo con ajax a las ventanas de mensaje
+			echo json_encode([
+				'type' => 'error',
+				'text' => 'Lo sentimos pero no fue acreditado para poder obtener el apoyo. Requiere un promedio de 8.5 a 10'
+			]);
 		}
+	} else {
+		# Imprimimos un json de error para devolverlo con ajax a las ventanas de mensaje
+		echo json_encode([
+			'type' => 'error',
+			'text' => 'Lo sentimos pero no fue acreditado para poder obtener el apoyo. Require ser menor de edad'
+		]);
 	}
-?>
+
+	# Verificamos que el valor del campo con name "mothers-form" exista y no sea nulo
+} else if (isset($_POST['mothers-form'])) {
+
+	/**
+	 * Variable donde almacenamos el estado civil de la madre soltera que se esta registrando
+	 * @var String
+	 */
+	$status = $_POST['status'];
+
+	/**
+	 * Variable donde almacenamos el estado residencial de la madre soltera que se esta registrando
+	 * @var String
+	 */
+	$state = $_POST['state'];
+
+	/**
+	 * Variable donde almacenamos si tiene la menos un hijo menor de edad la madre soltera que se esta registrando
+	 * @var String
+	 */
+	$question = $_POST['question'];
+
+	/**
+	 * Variable donde almacenamos la edad del hijo menor de edad si es que tiene la madre soltera que se esta registrando
+	 * @var int
+	 */
+	$age = $_POST['age'];
+
+	# Validamos que por lo menos tenga un hijo
+	if (strcmp($question, 'si') == 0) {
+		# Comprobamos que ese hijo sea menor de edad para poder hacerla acreedora al beneficio
+		if ($age > 0 && $age < 18) {
+			# Imprimimos un json de éxito para devolverlo con ajax a las ventanas de mensaje
+			echo json_encode([
+				'type' => 'success',
+				'text' => 'Felicidades has logrado obtener el apoyo de 1200 pesos mexicanos'
+			]);
+		} else {
+			# Imprimimos un json de error para devolverlo con ajax a las ventanas de mensaje
+			echo json_encode([
+				'type' => 'error',
+				'text' => 'Lo sentimos pero no fue acreditada para poder obtener el apoyo. Su hijo requiere ser menor de edad',
+			]);
+		}
+	} else {
+		# Imprimimos un json de error para devolverlo con ajax a las ventanas de mensaje
+		echo json_encode([
+			'type' => 'error',
+			'text' => 'Lo sentimos pero no fue acreditada para poder obtener el apoyo. Requiere tener por lo menos un hijo',
+		]);
+	}
+
+	# Verificamos que el valor del campo con name "adults-form" exista y no sea nulo
+} else if (isset($_POST['adults-form'])) {
+
+	/**
+	 * Variable donde almacenamos el estado residencial del adulto mayor que se esta registrando
+	 * @var String
+	 */
+	$state = $_POST['state'];
+
+	/**
+	 * Variable donde almacenamos la edad del adulto mayor que se esta registrando
+	 * @var int
+	 */
+	$age = $_POST['age'];
+
+	# Validamos que el adulto que se registró verdaderamente sea mayor
+	if ($age >= 70) {
+		# Imprimimos un json de éxito para devolverlo con ajax a las ventanas de mensaje
+		echo json_encode([
+			'type' => 'success',
+			'text' => 'Felicidades ha logrado obtener el apoyo de 900 pesos mexicanos',
+		]);
+	} else {
+		# Imprimimos un json de error para devolverlo con ajax a las ventanas de mensaje
+		echo json_encode([
+			'type' => 'error',
+			'text' => 'Lo sentimos pero no fue acreditad@ para poder obtener el apoyo',
+		]);
+	}
+}

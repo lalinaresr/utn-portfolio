@@ -24,7 +24,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Apoyos Económicos',
         'description' => 'Tercera práctica la cual consistía en crear un formulario en el cual damos como opciones 3 tipos de apoyos (Estudiantes, Madres Solteras, Adultos Mayores) y dependiendo del que seleccionara el usuario arrojaría el formulario correspondiente.',
-        'link' => 'practicas/primer-parcial/apoyos-economicos/',
+        'link' => 'practicas/primer-parcial/apoyos-economicos',
         'image' => 'public/images/projects/ae.png'
     ],
     [
