@@ -32,7 +32,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Agencia de Carros',
         'description' => 'Cuarta práctica la cual consistía en realizar la venta de un carro, y esta depende del tipo de carro, versión y plan de trabajo. El usuario iba proporcionando datos para adquirir su carro a la medida. Al final se le presentaba los detalles de compra.',
-        'link' => 'practicas/primer-parcial/agencia-carros/',
+        'link' => 'practicas/primer-parcial/agencia-carros',
         'image' => 'public/images/projects/ac.png'
     ],
     [
