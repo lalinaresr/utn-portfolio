@@ -56,7 +56,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Tablas de Multiplicar',
         'description' => 'Quinta práctica la cual consistía en mostrar la tabla de multiplicar de un número hasta el 10. El número debía ser ingresado por el usuario. En los números pares del 1 al 10 se pintaban de color verde y los impares de color rojo.',
-        'link' => 'practicas/segundo-parcial/tablas-multiplicar/',
+        'link' => 'practicas/segundo-parcial/tablas-multiplicar',
         'image' => 'public/images/projects/tm.png'
     ],
     [
