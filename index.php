@@ -64,7 +64,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Edades',
         'description' => 'Sexta práctica esta consistía en crear un grupo de cuatro amigos los cuales contenían 3 datos y eran el nombre, teléfono y su edad. Nos interesaba conocer que persona tenía que edad, pero al final el objetivo era sumar las edades de los cuatro.',
-        'link' => 'practicas/segundo-parcial/edades/',
+        'link' => 'practicas/segundo-parcial/edades',
         'image' => 'public/images/projects/e.png'
     ],
     [
