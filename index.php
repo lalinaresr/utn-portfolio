@@ -48,7 +48,7 @@ $projects = [
         'type' => 'examen',
         'title' => 'Inmobiliaria',
         'description' => 'Examen tipo B del primer parcial el cual consistía en simular ventas de inmuebles por continentes presentando un formulario el cual solicitaba el continente, tiempo a pagar, sueldo y enganche para poder hacer los cálculos pertinentes validando que el sueldo y enganche sean aptos para obtener el crédito.',
-        'link' => 'examenes/primer-parcial/inmobiliaria/',
+        'link' => 'examenes/primer-parcial/inmobiliaria',
         'image' => 'public/images/projects/i.png'
     ],
     [
