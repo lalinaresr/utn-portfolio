@@ -47,7 +47,7 @@ code {
     font-size: 80%;
 }
 
-#center-table td {
+#center-table th, td {
     text-align: center;
     vertical-align: middle;
 }

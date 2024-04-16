@@ -40,7 +40,7 @@ $projects = [
         'type' => 'examen',
         'title' => 'Tienda Deportiva',
         'description' => 'Examen tipo A del primer parcial el cual consistía en simular ventas en una tienda deportiva presentando un formulario el cual solicitaba los datos de tipo de producto, marca y cantidad para poder hacer los cálculos pertinentes dependiente el producto la cantidad y agregándole un porcentaje extra por marca.',
-        'link' => 'examenes/primer-parcial/tienda-deportiva/',
+        'link' => 'examenes/primer-parcial/tienda-deportiva',
         'image' => 'public/images/projects/td.png'
     ],
     [
