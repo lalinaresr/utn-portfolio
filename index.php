@@ -72,7 +72,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Inventario de refacciones',
         'description' => 'Séptima práctica la cual consistía en mostrar el inventario con 5 productos los cuales tenían las columnas de: Folio, Nombre, Existencia y Reorden este debía compararse con la existencia para ver en qué estado entraba: Critico, Disponible o Agotado.',
-        'link' => 'practicas/segundo-parcial/inventario-refacciones/',
+        'link' => 'practicas/segundo-parcial/inventario-refacciones',
         'image' => 'public/images/projects/ir.png'
     ],
     [
