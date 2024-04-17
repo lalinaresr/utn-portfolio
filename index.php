@@ -80,7 +80,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Reporte de ventas',
         'description' => 'Octava práctica la cual consistía en mostrar el total de ventas por empleado durante un periodo de 4 semanas, y a partir de eso obtener a quien haya vendido más y la cantidad que obtuvo durante ese periodo.',
-        'link' => 'practicas/segundo-parcial/reporte-ventas/',
+        'link' => 'practicas/segundo-parcial/reporte-ventas',
         'image' => 'public/images/projects/rv.png'
     ],
     [

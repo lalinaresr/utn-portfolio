@@ -1,143 +1,95 @@
 <?php
-    require_once 'config.php';
-    require_once LIBRARIES_PATH . '/fpdf/fpdf.php';
+require_once 'config.php';
+require_once 'data.php';
+require_once LIBRARIES_PATH . '/fpdf/fpdf.php';
 
+class PDF extends FPDF
+{
+    public function Header()
+    {
+        $this->SetFont('Arial', 'B', 15);
+        $this->Cell(210);
+        $this->SetDrawColor(217, 84, 79);
+        $this->SetFillColor(255, 255, 255);
+        $this->SetTextColor(217, 84, 79);
+        $this->Cell(35, 16, 'Ventas', 1, 0, 'C');
+        $this->Ln(20);
+    }
 
-    class ConvertirPDF extends FPDF {
-    
+    public function Footer()
+    {
+        $this->SetY(-15);
+        $this->SetFont('Arial', 'I', 8);
+        $this->Cell(0, 15, 'Pagina ' . $this->PageNo() . '/{nb}', 0, 0, 'C');
+    }
 
-        // Cabecera de página
-        public function Header() {
-            // Logo
-            $this->Image(IMAGES_PATH . '/rv/1.jpg', 10, 10, 35);
-            
-            // Arial bold 15
-            $this->SetFont('Arial', 'B', 15);
-            
-            // Movernos a la derecha
-            $this->Cell(185);
-            
-            // Titulo con detalles de colores
-            $this->SetDrawColor(217, 84,79);
-            $this->SetFillColor(255, 255, 255);
-            $this->SetTextColor(217, 84, 79);
-            $this->Cell(35, 16, 'Ventas', 1, 0, 'C');
+    public function FillTable()
+    {
+        global $headers, $sales_first_week, $sales_second_week, $sales_third_week, $sales_fourth_week, $sales_by_mounth, $all_sales, $commissions, $salaries, $insurance_money, $total, $major_sale, $minor_sale, $major_seller, $minor_seller;
 
-            // Salto de línea
-            $this->Ln(20);
+        foreach ($headers as $column) {
+            $this->Cell(40, 10, iconv('UTF-8', 'windows-1252', $column), 1, 0, 'C');
         }
+        $this->Ln();
 
-        // Pie de página
-        public function Footer() {
-            // Posición: a 1,5 cm del final
-            $this->SetY(-15);
-            // Arial italic 8
-            $this->SetFont('Arial','I',8);
-            // Número de página
-            $this->Cell(0, 10, 'Pagina ' . $this->PageNo() . '/{nb}', 0, 0, 'C');
-        }
+        $rows = count($_SESSION['sales']);
 
+        for ($i = 0; $i < $rows; $i++) {
+            $sales_first_week += $_SESSION['sales'][$i]['first_week'];
+            $sales_second_week += $_SESSION['sales'][$i]['second_week'];
+            $sales_third_week += $_SESSION['sales'][$i]['third_week'];
+            $sales_fourth_week += $_SESSION['sales'][$i]['fourth_week'];
+            $sales_by_mounth = $_SESSION['sales'][$i]['first_week'] + $_SESSION['sales'][$i]['second_week'] + $_SESSION['sales'][$i]['third_week'] + $_SESSION['sales'][$i]['fourth_week'];
+            $all_sales += $sales_by_mounth;
+            $commissions += ($sales_by_mounth * 0.02);
+            $salaries += $_SESSION['sales'][$i]['salary'];
+            $insurance_money += (($_SESSION['sales'][$i]['salary'] + ($sales_by_mounth * 0.02)) * 0.03);
+            $total += ($sales_by_mounth + ($sales_by_mounth * 0.02) + $_SESSION['sales'][$i]['salary'] +  ((($sales_by_mounth * 0.02) + $_SESSION['sales'][$i]['salary']) * 0.03));
 
-        public function crearTabla() {
-
-            //Cabecera con el nombre columnas
-            foreach(array(
-                'Folio',
-                'Nombre',
-                'Semana 1',
-                'Semana 2',
-                'Semana 3',
-                'Semana 4',
-                'Comisión 2%',
-                'Sueldo B.',
-                'Seguro 3%',
-                'Total'
-            ) as $columna) {
-                $this->Cell(40, 7, $columna, 1, 0, 'C');
-            }   
-            $this->Ln();
-
-            $ventas = array(
-               array('folio' => 1, 'nombre' => 'Edgar', 'semana_1' => 5000, 'semana_2' => 8000, 'semana_3' => 7000, 'semana_4' => 5000, 'sueldo' => 2000),
-               array('folio' => 2, 'nombre' => 'Brenda', 'semana_1' => 7000, 'semana_2' => 3000, 'semana_3' => 8000, 'semana_4' => 2000, 'sueldo' => 2200),
-               array('folio' => 3, 'nombre' => 'Miguel', 'semana_1' => 5000, 'semana_2' => 10000, 'semana_3' => 4000, 'semana_4' => 3000, 'sueldo' => 1800),
-               array('folio' => 4, 'nombre' => 'Rosa', 'semana_1' => 3000, 'semana_2' => 2500, 'semana_3' => 5500, 'semana_4' => 9000, 'sueldo' => 2000),
-               array('folio' => 5, 'nombre' => 'Sandy', 'semana_1' => 5500, 'semana_2' => 2000, 'semana_3' => 3000, 'semana_4' => 4000, 'sueldo' => 2100)
-            );
-
-            $totalVentasSemana = 0;
-            $totalSemanaUno = 0;
-            $totalSemanaDos = 0;
-            $totalSemanaTres = 0;
-            $totalSemanaCuatro = 0;
-            $totalComisiones = 0;
-            $totalSueldos = 0;
-            $totalSeguros = 0;
-            $totalFinal = 0;
-            $ventaMayor = 0;
-            $vendedorMayor = "";
-			$ventaMenor = 999999;
-			$vendedorMenor = "";
-            for ($i = 0; $i < count($ventas); $i++) {
-                $totalVentasSemana = $ventas[$i]['semana_1'] + $ventas[$i]['semana_2'] + $ventas[$i]['semana_3'] + $ventas[$i]['semana_4'];
-                $totalSemanaUno = $totalSemanaUno + $ventas[$i]['semana_1'];
-                $totalSemanaDos = $totalSemanaDos + $ventas[$i]['semana_2'];
-                $totalSemanaTres = $totalSemanaTres + $ventas[$i]['semana_3'];
-                $totalSemanaCuatro = $totalSemanaCuatro + $ventas[$i]['semana_4'];
-                $totalComisiones = $totalComisiones + ($totalVentasSemana * 0.02);
-                $totalSueldos = $totalSueldos + $ventas[$i]['sueldo'];
-                $totalSeguros = $totalSeguros + ((($totalVentasSemana * 0.02) + $ventas[$i]['sueldo']) * 0.03);
-                $totalFinal = $totalFinal + ($totalVentasSemana + ($totalVentasSemana * 0.02) + $ventas[$i]['sueldo'] +  ((($totalVentasSemana * 0.02) + $ventas[$i]['sueldo']) * 0.03)); 
-                
-                if($totalVentasSemana >= $ventaMayor) {
-                   /* $ventaMayor = $ventaMayor . $totalVentasSemana . ', ';
-                   $vendedorMayor = $vendedorMayor . $ventas[$i]['nombre'] . ' y '; */
-
-                   $ventaMayor = $totalVentasSemana;
-                   $vendedorMayor = $ventas[$i]['nombre']; 
-                }  else if($ventaMenor > $totalVentasSemana){
-					$ventaMenor = $totalVentasSemana;
-					$vendedorMenor = $ventas[$i]['nombre']; 
-				 }
-
-                $this->Cell(40, 5, $ventas[$i]['folio'], 1, 0, 'C');  
-                $this->Cell(40, 5, $ventas[$i]['nombre'], 1, 0, 'C');  
-                $this->Cell(40, 5, '$' . $ventas[$i]['semana_1'], 1, 0, 'C');  
-                $this->Cell(40, 5, '$' . $ventas[$i]['semana_2'], 1, 0, 'C');  
-                $this->Cell(40, 5, '$' . $ventas[$i]['semana_3'], 1, 0, 'C');  
-                $this->Cell(40, 5, '$' . $ventas[$i]['semana_4'], 1, 0, 'C');  
-                $this->Cell(40, 5, '$' . ($totalVentasSemana * 0.02), 1, 0, 'C');  
-                $this->Cell(40, 5, '$' . $ventas[$i]['sueldo'], 1, 0, 'C');  
-                $this->Cell(40, 5, '$' . ((($totalVentasSemana * 0.02) + $ventas[$i]['sueldo']) * 0.03) , 1, 0, 'C');                  
-                $this->Cell(40, 5, '$' . ($totalVentasSemana + ($totalVentasSemana * 0.02) + $ventas[$i]['sueldo'] +  ((($totalVentasSemana * 0.02) + $ventas[$i]['sueldo']) * 0.03)), 1, 0, 'C');  
-                
-                $this->Ln();
+            if ($sales_by_mounth > $major_sale) {
+                $major_sale = $sales_by_mounth;
+                $major_seller = $_SESSION['sales'][$i]['name'];
             }
-            $this->Cell(80, 5, 'Total:', 1, 0, 'C');
-            $this->Cell(40, 5, '$' . $totalSemanaUno, 1, 0, 'C');
-            $this->Cell(40, 5, '$' . $totalSemanaDos, 1, 0, 'C');
-            $this->Cell(40, 5, '$' . $totalSemanaTres, 1, 0, 'C');
-            $this->Cell(40, 5, '$' . $totalSemanaCuatro, 1, 0, 'C');
-            $this->Cell(40, 5, '$' . $totalComisiones, 1, 0, 'C');
-            $this->Cell(40, 5, '$' . $totalSueldos, 1, 0, 'C');
-            $this->Cell(40, 5, '$' . $totalSeguros, 1, 0, 'C');
-            $this->Cell(40, 5, '$' . $totalFinal, 1, 0, 'C');
 
-            $this->Ln(8);
-            $this->Cell(120, 5, 'La mayor venta fue de $' . $ventaMayor . ' hecha por '. $vendedorMayor, 0, 0, 'L');
-			$this->Ln(8);
-			$this->Cell(120, 5, 'La menor venta fue de $' . $ventaMenor . ' hecha por '. $vendedorMenor, 0, 0, 'L');
-            /* $this->Cell(120, 5, 'La mayor venta fue de $' . substr( $ventaMayor , 1, -2) . ' hecha por '. substr( $vendedorMayor , 0 , -3) . ' .', 0, 0, 'L'); */
+            if ($minor_sale > $sales_by_mounth) {
+                $minor_sale = $sales_by_mounth;
+                $minor_seller = $_SESSION['sales'][$i]['name'];
+            }
 
+            $this->Cell(40, 10, $_SESSION['sales'][$i]['id'], 1, 0, 'C');
+            $this->Cell(40, 10, $_SESSION['sales'][$i]['name'], 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format($_SESSION['sales'][$i]['first_week'], 2), 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format($_SESSION['sales'][$i]['second_week'], 2), 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format($_SESSION['sales'][$i]['third_week'], 2), 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format($_SESSION['sales'][$i]['fourth_week'], 2), 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format($sales_by_mounth, 2), 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format(($sales_by_mounth * 0.02), 2), 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format($_SESSION['sales'][$i]['salary'], 2), 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format((($_SESSION['sales'][$i]['salary'] + ($sales_by_mounth * 0.02)) * 0.03), 2), 1, 0, 'C');
+            $this->Cell(40, 10, '$' . number_format(($sales_by_mounth + ($sales_by_mounth * 0.02) + $_SESSION['sales'][$i]['salary'] + (($_SESSION['sales'][$i]['salary'] + ($sales_by_mounth * 0.02)) * 0.03)), 2), 1, 0, 'C');
+            $this->Ln();
         }
-    }   
+        $this->Cell(80, 10, 'Totales', 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($sales_first_week, 2), 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($sales_second_week, 2), 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($sales_third_week, 2), 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($sales_fourth_week, 2), 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($all_sales, 2), 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($commissions, 2), 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($salaries, 2), 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($insurance_money, 2), 1, 0, 'C');
+        $this->Cell(40, 10, '$' . number_format($total, 2), 1, 0, 'C');
+        $this->Ln();
+        $this->Cell(440, 10, 'La mayor venta fue de $' . number_format($major_sale, 2) . ' hecha por ' . $major_seller, 1, 0, 'C');
+        $this->Ln();
+        $this->Cell(440, 10, 'La menor venta fue de $' . number_format($minor_sale, 2) . ' hecha por ' . $minor_seller, 1, 0, 'C');
+    }
+}
 
-    // Creación del objeto de la clase heredada
-    $pdf = new ConvertirPDF('L', 'mm', array(420, 250));
-    $pdf->setTitle(APP_NAME);
-    $pdf->AliasNbPages();
-    $pdf->AddPage();
-    $pdf->SetFont('Arial');
-    $pdf->crearTabla();
-    $pdf->Output();
-?>
+$pdf = new PDF('L', 'mm', [460, 200]);
+$pdf->setTitle(APP_NAME);
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont('Arial');
+$pdf->FillTable();
+$pdf->Output();
