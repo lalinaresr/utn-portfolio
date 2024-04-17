@@ -88,7 +88,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Cajero Automático',
         'description' => 'Novena práctica la cual consistía en simular un cajero automático con 5 transacciones bancarias, y depende de si era un retiro o deposito se sumaba o restaba para crear un saldo final con fecha de esa transacción para simular que día se hizo.',
-        'link' => 'practicas/segundo-parcial/cajero-automatico/',
+        'link' => 'practicas/segundo-parcial/cajero-automatico',
         'image' => 'public/images/projects/ca.png'
     ],
     [
