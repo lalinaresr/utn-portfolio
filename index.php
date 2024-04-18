@@ -96,7 +96,7 @@ $projects = [
         'type' => 'practica',
         'title' => 'Cafetería',
         'description' => 'Décima práctica la cual consistía en simular ventas de una cafetería usando arreglos dinámicos los cuales crecían dependiendo del total de productos, precio y su cantidad se sacaba total por producto y un total final a pagar.',
-        'link' => 'practicas/segundo-parcial/cafeteria/',
+        'link' => 'practicas/segundo-parcial/cafeteria',
         'image' => 'public/images/projects/c.png'
     ],
     [
