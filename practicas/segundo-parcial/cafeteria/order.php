@@ -1,8 +1,14 @@
 <?php
+session_start();
 require_once 'config.php';
 require_once 'data.php';
 
-$title = APP_NAME . ' | Productos';
+if (!isset($_POST['products']) || count($_POST['products']) == 0) {
+   header('Location: ' . APP_URL . '/products.php');
+   exit;
+}
+
+$title = APP_NAME . ' | Completar pedido';
 
 $styles = [
    LAYOUTS_PATH . '/css/libs/animate.css',
@@ -13,10 +19,9 @@ $styles = [
 
 $scripts = [
    LAYOUTS_PATH . '/js/libs/wow.js',
-   LAYOUTS_PATH . '/js/c_products.js',
    LAYOUTS_PATH . '/js/c.js'
 ];
 
 include_once PARTIALS_PATH . '/header.php';
-include_once PARTIALS_PATH . '/c/products.php';
+include_once PARTIALS_PATH . '/c/order.php';
 include_once PARTIALS_PATH . '/footer.php';

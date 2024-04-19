@@ -309,10 +309,9 @@ a:hover {
 .price-mainheading {
     text-align: left;
     font-weight: 400;
-    color: white;
+    color: #ae895c;
     font-size: 2em;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    /* font-family: 'Ubuntu', sans-serif !important; */
     letter-spacing: 0;
     margin-bottom: 27px;
     margin-top: 47px;
@@ -320,7 +319,6 @@ a:hover {
 
 .price-heading {
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    /* font-family: 'Ubuntu', sans-serif !important; */
     text-align: left;
     font-weight: 400;
     color: white;
@@ -346,7 +344,6 @@ a:hover {
 .price-item {
     position: absolute;
     font-family: 'Open Sans', sans-serif;
-    /* font-family: 'Ubuntu', sans-serif !important; */
     color: white;
     font-size: 0.7em;
     display: inline;
