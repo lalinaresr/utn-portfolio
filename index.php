@@ -102,10 +102,10 @@ $projects = [
     [
         'id' => 13,
         'type' => 'practica',
-        'title' => 'Ferretería',
-        'description' => 'Onceava práctica la cual consistía en simular un sistema completo de una ferretería en el que se tenía la tabla clientes, piezas y ventas. En cada tabla se realizaba el CRUD (Create, Read, Update, Delete). Además de hacer las operaciones pertinentes a la hora de realizar la venta de las piezas.',
-        'link' => 'practicas/segundo-parcial/ferreteria/',
-        'image' => 'public/images/projects/f.png'
+        'title' => 'CRUD',
+        'description' => 'Onceava práctica la cual consistía en simular la inserción, actualización y eliminación de un catálogo usando ajax para el manejo de las respuestas y la interacción con el usuario.',
+        'link' => 'practicas/segundo-parcial/crud',
+        'image' => 'public/images/projects/default.png'
     ],
     [
         'id' => 14,
