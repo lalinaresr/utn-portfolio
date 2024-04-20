@@ -103,7 +103,7 @@ $projects = [
         'id' => 13,
         'type' => 'practica',
         'title' => 'CRUD',
-        'description' => 'Onceava práctica la cual consistía en simular la inserción, actualización y eliminación de un catálogo usando ajax para el manejo de las respuestas y la interacción con el usuario.',
+        'description' => 'Onceava práctica la cual consistía en simular la selección, inserción, actualización y eliminación de un catálogo usando ajax para el manejo de las respuestas y la interacción con el usuario.',
         'link' => 'practicas/segundo-parcial/crud',
         'image' => 'public/images/projects/default.png'
     ],
