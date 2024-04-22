@@ -33,6 +33,10 @@ body>.container {
     padding: 60px 15px 0;
 }
 
+body>.container-fluid {
+    padding: 60px 15px 0;
+}
+
 .container .text-muted {
     color: #ffffff !important;
     margin: 20px 0;
@@ -45,11 +49,6 @@ body>.container {
 
 code {
     font-size: 80%;
-}
-
-#center-table td {
-    text-align: center;
-    vertical-align: middle;
 }
 
 /* Estilo de la Barra de Navegacion */

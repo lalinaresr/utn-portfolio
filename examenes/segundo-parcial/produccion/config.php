@@ -15,6 +15,10 @@ define('CONNECTION', [
 
 const SITE_URL = 'http://127.0.0.1:8000';
 
-const APP_URL = SITE_URL . '/examenes/segundo-parcial/produccion/';
+const APP_URL = SITE_URL . '/examenes/segundo-parcial/produccion';
 
 const LAYOUTS_PATH = SITE_URL . '/layouts';
+
+const PARTIALS_PATH = '../../../layouts/partials';
+
+const COMPONENTS_PATH = '../../../layouts/components';

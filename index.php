@@ -112,7 +112,7 @@ $projects = [
         'type' => 'examen',
         'title' => 'Producción',
         'description' => 'Examen tipo A del segundo parcial el cual consistía en insertar y consultar información acerca de plantas productoras, en las cuales teníamos su nombre, cantidad producida y cantidad defectuosa de cada una. Además de recuperar información como mayor y menor planta productora y defectuosa.',
-        'link' => 'examenes/segundo-parcial/produccion/',
+        'link' => 'examenes/segundo-parcial/produccion',
         'image' => 'public/images/projects/p.png'
     ],
     [
