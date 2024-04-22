@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="contact">
                     <div class="col-md-12 contact-grid1">
-                        <table class="table table-responsive table-bordered table-hover table-condensed" id="center-table">                            
+                        <table class="table table-bordered table-hover table-condensed table-centered">                            
                             <?php include_once COMPONENTS_PATH . '/c/products-checkout.php'; ?>
                         </table>
                         <a href="<?= APP_URL; ?>/PDF.php" class="btn main-btn" target="_blank"><i class="fa fa-fw fa-file-pdf-o"></i> Imprimir ticket</a>

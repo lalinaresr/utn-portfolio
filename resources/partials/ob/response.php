@@ -1,9 +1,9 @@
 <div class="col-md-12">
     <div class="panel panel-default">
         <div class="panel-body">
-            <table class="table table-responsive table-bordered table-condensed" id="center-table">
-                <tr bgcolor="#5BC0DE">
-                    <th class="text-center tx-white" colspan="5">Operaciones básicas</th>
+            <table class="table table-bordered table-condensed table-centered">
+                <tr class="ob">
+                    <th colspan="5">Operaciones básicas</th>
                 </tr>
                 <?php include_once COMPONENTS_PATH . '/ob/calculator-response.php'; ?>
             </table>

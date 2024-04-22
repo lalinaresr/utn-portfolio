@@ -18,9 +18,9 @@ $rows = count($_SESSION['sales']);
  */
 $html = '';
 
-$html .= '<tr bgcolor="#D9534F">';
+$html .= '<tr class="rv">';
 foreach ($headers as $header) {
-    $html .= '<th class="tx-white">' . $header . '</th>';
+    $html .= '<th>' . $header . '</th>';
 }
 $html .= '</tr>';
 

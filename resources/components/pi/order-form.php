@@ -28,5 +28,5 @@
         <label for="amount">Cantidad:</label>
         <input type="number" id="amount" name="amount" class="form-control" required min="0" max="50" step="1">
     </div>
-    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span> Ordenar</button>
+    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-send"></span> Ordenar</button>
 </form>

@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="panel panel-default">
         <div class="panel-body">
-            <table class="table table-responsive table-bordered">
+            <table class="table table-bordered table-centered">
                 <?php                
                     # Verificamos que el campo con name "info-tab" exista y no sea nulo
                     if (isset($_POST['info-tab'])) {

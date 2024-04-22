@@ -11,7 +11,7 @@
                 <button id="btn-experience-show" class="btn btn-warning btn-block"><i class="fa fa-fw fa-institution"></i> Experiencia</button>
                 <a href="<?= SITE_URL; ?>" class="btn btn-default btn-block"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a>
             </div>
-            <div class="mv-lg mt-10">
+            <div class="mv-lg mt-3">
                 <p class="text-center">© Derechos Reservados | Luis Linares 2018.</p>
             </div>
         </div>

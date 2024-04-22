@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row mt-20">
+    <div class="row mt-4">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-body">

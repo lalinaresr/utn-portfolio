@@ -1,17 +1,17 @@
 <div class="container">
-    <div class="row mt-20">
+    <div class="row mt-4">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <table class="table table-responsive table-bordered table-condensed" id="center-table">
-                        <tr bgcolor="#014ED8">
-                            <th class="text-center tx-white" colspan="4"><?= APP_NAME; ?></th>
+                    <table class="table table-bordered table-condensed table-centered">
+                        <tr class="ir">
+                            <th colspan="4"><?= APP_NAME; ?></th>
                         </tr>
-                        <tr bgcolor="#014ED8">
-                            <th class="text-center tx-white">Folio</th>
-                            <th class="text-center tx-white">Nombre</th>
-                            <th class="text-center tx-white">Existencia</th>
-                            <th class="text-center tx-white">Pedido</th>
+                        <tr class="ir">
+                            <th>Folio</th>
+                            <th>Nombre</th>
+                            <th>Existencias</th>
+                            <th>Pedido</th>
                         </tr>
                         <?php include_once COMPONENTS_PATH . '/ir/list-response.php'; ?>
                     </table>

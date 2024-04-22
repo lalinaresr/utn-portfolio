@@ -18,7 +18,7 @@ $last_job = $_POST['last_job'];
  */
 $knowledges = $_POST['knowledges'];
 
-echo '<tr><th class="text-center" colspan="2">Experiencia</th></tr>
+echo '<tr><th colspan="2">Experiencia</th></tr>
 <tr>
     <th>Primer empleo</th>
     <td>' . $first_job . '</td>

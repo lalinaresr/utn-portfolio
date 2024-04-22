@@ -4,7 +4,7 @@ require_once 'connection.php';
 $title = APP_NAME . ' | Respuesta';
 
 $styles = [
-	RESOURCES_PATH . '/css/p.css'
+	RESOURCES_PATH . '/css/pi.css'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

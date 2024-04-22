@@ -9,7 +9,7 @@ $styles = [
 
 include_once PARTIALS_PATH . '/header.php';
 include_once PARTIALS_PATH . '/basic/navbar.php';
-echo '<div class="container"><div class="row mt-20">';
+echo '<div class="container"><div class="row mt-4">';
 include_once PARTIALS_PATH . '/ob/response.php';
 echo '</div></div>';
 include_once PARTIALS_PATH . '/basic/footer.php';

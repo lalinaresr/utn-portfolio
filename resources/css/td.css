@@ -1,90 +1,56 @@
-/* your styles go here */
+@import url('./_variables.css');
+@import url('./basic.css');
 
-html {
-    position: relative;
-    min-height: 100%;
+:root {
+    --app-background-color: var(--td);
+    --app-text-color: var(--white);
 }
 
-body {
-    margin-bottom: 60px;
-}
-
-.panel.panel-default {
-    border-top-width: 3px;
-}
-
-.panel {
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
-    border: 0;
-    border-radius: 4px;
-    margin-bottom: 16px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    background-color: #CE9514 !important;
-}
-
-body>.container {
-    padding: 60px 15px 0;
+.td {
+    background-color: var(--app-background-color);
+    color: var(--app-text-color);
 }
 
 .container .text-muted {
-    color: #ffffff !important;
-    margin: 20px 0;
+    color: var(--app-text-color) !important;
 }
 
-.footer>.container {
-    padding-right: 15px;
-    padding-left: 15px;
+.footer {
+    background-color: var(--app-background-color) !important;
 }
 
-code {
-    font-size: 80%;
-}
+/* CAMBIOS DE COLOR PARA LA BARRA DE NAVEGACIÓN */
 
-#center-table th, td {
-    text-align: center;
-    vertical-align: middle;
-}
-
-/* Estilo de la Barra de Navegacion */
 .navbar-default {
-    background-color: #CE9514 !important;
+    background-color: var(--app-background-color) !important;
 }
 
 .navbar-default .navbar-brand {
-    color: #ffffff !important;
+    color: var(--app-text-color) !important;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #ffffff !important;
+    color: var(--app-text-color) !important;
 }
 
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
-    background-color: #CE9514 !important;
+    background-color: var(--app-background-color) !important;
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #CE9514 !important;
+    border-color: var(--app-background-color) !important;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #ffffff !important;
+    background-color: var(--app-text-color) !important;
 }
 
-/* FIN Estilo de la Barra de Navegacion */
-
-
+/* CAMBIOS DE COLOR PARA LOS BOTONES (NO OBLIGATORIO) */
 .btn-custom {
-    color: #ffffff !important;
-    background-color: #CE9514 !important;
-    border-color: #CE9514 !important;
+    color: var(--app-text-color) !important;
+    background-color: var(--app-background-color) !important;
+    border-color: var(--app-background-color) !important;
 }
 
 .btn-custom.active.focus,
@@ -96,7 +62,7 @@ code {
 .open>.dropdown-toggle.btn-custom.focus,
 .open>.dropdown-toggle.btn-custom:focus,
 .open>.dropdown-toggle.btn-custom:hover {
-    color: #ffffff !important;
-    background-color: #CE9514 !important;
-    border-color: #CE9514 !important;
+    color: var(--app-text-color) !important;
+    background-color: var(--app-background-color) !important;
+    border-color: var(--app-background-color) !important;
 }

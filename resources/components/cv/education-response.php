@@ -18,7 +18,7 @@ $university = $_POST['university'];
  */
 $courses = $_POST['courses'];
 
-echo '<tr><th class="text-center" colspan="2">Educación</th></tr>
+echo '<tr><th colspan="2">Educación</th></tr>
 <tr>
     <th>Preparatoria</th>
     <td>' . $preparatory . '</td>

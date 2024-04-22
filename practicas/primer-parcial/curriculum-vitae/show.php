@@ -12,7 +12,7 @@ $scripts = [
 ];
 
 include_once PARTIALS_PATH . '/header.php';
-echo '<div class="container"><div class="row">';
+echo '<div class="container"><div class="row mt-4">';
 include_once PARTIALS_PATH . '/cv/response.php';
 echo '</div></div>';
 include_once PARTIALS_PATH . '/footer.php';

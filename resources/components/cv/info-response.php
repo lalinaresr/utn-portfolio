@@ -36,7 +36,7 @@ $phone = $_POST['phone'];
  */
 $email = $_POST['email'];
 
-echo '<tr><th class="text-center" colspan="2">Información personal</th></tr>
+echo '<tr><th colspan="2">Información personal</th></tr>
 <tr>
     <th>Nombre completo</th>
     <td>' . $fullname . '</td>

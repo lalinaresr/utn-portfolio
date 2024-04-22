@@ -76,9 +76,9 @@
         <strong>¡Aviso!</strong> El enganche no es lo suficiente
     </div>
 <?php elseif ($salary_30 > $monthly) : ?>
-    <table class="table table-responsive table-bordered table-condensed" id="center-table">
-        <tr bgcolor="#47BBA4">
-            <th class="text-center tx-white" colspan="2">Verificar Compra</th>
+    <table class="table table-bordered table-condensed table-centered">
+        <tr class="i">
+            <th colspan="2">Verificar Compra</th>
         </tr>
         <tr>
             <th>Continente</th>

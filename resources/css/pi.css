@@ -2,11 +2,11 @@
 @import url('./basic.css');
 
 :root {
-    --app-background-color: var(--ir);
+    --app-background-color: var(--pi);
     --app-text-color: var(--white);
 }
 
-.ir {
+.pi {
     background-color: var(--app-background-color);
     color: var(--app-text-color);
 }
