@@ -19,8 +19,8 @@ const SITE_URL = 'http://127.0.0.1:8000';
 
 const APP_URL = SITE_URL . '/practicas/segundo-parcial/crud';
 
-const LAYOUTS_PATH = SITE_URL . '/layouts';
+const RESOURCES_PATH = SITE_URL . '/resources';
 
-const PARTIALS_PATH = '../../../layouts/partials';
+const PARTIALS_PATH = '../../../resources/partials';
 
-const COMPONENTS_PATH = '../../../layouts/components';
+const COMPONENTS_PATH = '../../../resources/components';

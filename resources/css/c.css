@@ -147,7 +147,7 @@ a:hover {
 
 
 .banner {
-    background: url(../../../layouts/images/c/site/main-banner.jpg) no-repeat center center fixed;
+    background: url(../../../resources/images/c/site/main-banner.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -195,7 +195,7 @@ a:hover {
 
 
 .banner-inner {
-    background: url(../../../layouts/images/c/site/inner-banner.jpg) no-repeat center center fixed;
+    background: url(../../../resources/images/c/site/inner-banner.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -569,7 +569,7 @@ img.zoom-img:hover {
 @media (max-width:2560px) {
 
     .banner {
-        background: url(../../../layouts/images/c/site/main-banner.jpg) no-repeat center center fixed;
+        background: url(../../../resources/images/c/site/main-banner.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -583,7 +583,7 @@ img.zoom-img:hover {
 @media (max-width:1920px) {
 
     .banner {
-        background: url(../../../layouts/images/c/site/main-banner.jpg) no-repeat center center fixed;
+        background: url(../../../resources/images/c/site/main-banner.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -597,7 +597,7 @@ img.zoom-img:hover {
 @media (max-width:1600px) {
 
     .banner {
-        background: url(../../../layouts/images/c/site/main-banner.jpg) no-repeat center center fixed;
+        background: url(../../../resources/images/c/site/main-banner.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -653,7 +653,7 @@ img.zoom-img:hover {
     }
 
     .head-nav span.menu:before {
-        content: url(../../../layouts/images/c/site/menu.png);
+        content: url(../../../resources/images/c/site/menu.png);
         color: #FFF;
         font-size: 1.3em;
         text-transform: uppercase;

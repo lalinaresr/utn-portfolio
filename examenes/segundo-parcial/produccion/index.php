@@ -3,7 +3,7 @@ require_once 'connection.php';
 require_once 'plants/index.php';
 
 $styles = [
-	LAYOUTS_PATH . '/css/p.css'
+	RESOURCES_PATH . '/css/p.css'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

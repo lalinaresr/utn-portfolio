@@ -2,14 +2,14 @@
 require_once 'config.php';
 
 $styles = [
-   LAYOUTS_PATH . '/css/libs/sweetalert2.min.css',
-   LAYOUTS_PATH . '/css/ae.css'
+   RESOURCES_PATH . '/css/libs/sweetalert2.min.css',
+   RESOURCES_PATH . '/css/ae.css'
 ];
 
 $scripts = [
-   LAYOUTS_PATH . '/js/libs/jquery.form.min.js',
-   LAYOUTS_PATH . '/js/libs/sweetalert2.min.js',
-   LAYOUTS_PATH . '/js/ae.js'
+   RESOURCES_PATH . '/js/libs/jquery.form.min.js',
+   RESOURCES_PATH . '/js/libs/sweetalert2.min.js',
+   RESOURCES_PATH . '/js/ae.js'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

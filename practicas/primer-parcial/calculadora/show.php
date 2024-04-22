@@ -4,7 +4,7 @@ require_once 'config.php';
 $title = APP_NAME . ' | Resultados';
 
 $styles = [
-   LAYOUTS_PATH . '/css/ob.css'
+   RESOURCES_PATH . '/css/ob.css'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

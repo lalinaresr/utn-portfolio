@@ -2,15 +2,15 @@
 require_once 'config.php';
 
 $styles = [
-   LAYOUTS_PATH . '/css/libs/owl.carousel.css',
-   LAYOUTS_PATH . '/css/libs/owl.theme.css',
-   LAYOUTS_PATH . '/css/libs/owl.transitions.css',
-   LAYOUTS_PATH . '/css/cv.css'
+   RESOURCES_PATH . '/css/libs/owl.carousel.css',
+   RESOURCES_PATH . '/css/libs/owl.theme.css',
+   RESOURCES_PATH . '/css/libs/owl.transitions.css',
+   RESOURCES_PATH . '/css/cv.css'
 ];
 
 $scripts = [
-   LAYOUTS_PATH . '/js/libs/owl.carousel.min.js',
-   LAYOUTS_PATH . '/js/cv.js'
+   RESOURCES_PATH . '/js/libs/owl.carousel.min.js',
+   RESOURCES_PATH . '/js/cv.js'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

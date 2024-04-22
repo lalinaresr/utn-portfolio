@@ -84,7 +84,7 @@
 
 <tr>
     <td colspan="2">
-        <img src="<?= LAYOUTS_PATH; ?>/images/td/<?= $brand; ?>.png" class="img-responsive center-block" width="40%" title="<?= $brand; ?>">
+        <img src="<?= RESOURCES_PATH; ?>/images/td/<?= $brand; ?>.png" class="img-responsive center-block" width="40%" title="<?= $brand; ?>">
     </td>
 </tr>
 <tr>

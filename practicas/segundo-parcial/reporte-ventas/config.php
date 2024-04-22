@@ -8,12 +8,12 @@ const SITE_URL = 'http://127.0.0.1:8000';
 
 const APP_URL = SITE_URL . '/practicas/segundo-parcial/reporte-ventas';
 
-const LAYOUTS_PATH = SITE_URL . '/layouts';
+const RESOURCES_PATH = SITE_URL . '/resources';
 
-const IMAGES_PATH = '../../../layouts/images';
+const IMAGES_PATH = '../../../resources/images';
 
-const LIBRARIES_PATH = '../../../layouts/libraries';
+const LIBRARIES_PATH = '../../../resources/libraries';
 
-const PARTIALS_PATH = '../../../layouts/partials';
+const PARTIALS_PATH = '../../../resources/partials';
 
-const COMPONENTS_PATH = '../../../layouts/components';
+const COMPONENTS_PATH = '../../../resources/components';

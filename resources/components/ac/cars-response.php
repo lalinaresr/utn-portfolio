@@ -77,7 +77,7 @@
 
 <tr>
     <td colspan="2">
-        <img src="<?= LAYOUTS_PATH; ?>/images/ac/<?= $model; ?>.jpg" class="img-responsive center-block" width="40%" title="<?= $model; ?>">
+        <img src="<?= RESOURCES_PATH; ?>/images/ac/<?= $model; ?>.jpg" class="img-responsive center-block" width="40%" title="<?= $model; ?>">
     </td>
 </tr>
 <tr>

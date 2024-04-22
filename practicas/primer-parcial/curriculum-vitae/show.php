@@ -4,11 +4,11 @@ require_once 'config.php';
 $title = APP_NAME . ' | Mostrar Datos';
 
 $styles = [
-	LAYOUTS_PATH . '/css/cv.css'
+	RESOURCES_PATH . '/css/cv.css'
 ];
 
 $scripts = [
-	LAYOUTS_PATH . '/js/cv.js'
+	RESOURCES_PATH . '/js/cv.js'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

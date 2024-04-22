@@ -1,5 +1,5 @@
-    <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/jquery.min.js"></script>
-    <script type="text/javascript" src="<?= LAYOUTS_PATH; ?>/js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?= RESOURCES_PATH; ?>/js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="<?= RESOURCES_PATH; ?>/js/libs/bootstrap.min.js"></script>
     <?php if (isset($scripts)) : ?>
         <?php foreach ($scripts as $script) : ?>
             <?php if (is_array($script)) : ?>

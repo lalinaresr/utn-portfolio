@@ -2,7 +2,7 @@
     <div class="panel panel-default">
         <div class="panel-body text-center">
             <div class="pv-lg">
-                <img src="<?= LAYOUTS_PATH; ?>/images/cv/perfil/4.jpg" class="center-block img-responsive img-circle img-thumbnail thumb180" alt="Luis Antonio Linares Ramírez">
+                <img src="<?= RESOURCES_PATH; ?>/images/cv/perfil/4.jpg" class="center-block img-responsive img-circle img-thumbnail thumb180" alt="Luis Antonio Linares Ramírez">
             </div>
             <h3 class="m0 text-bold">Luis Antonio Linares Ramírez</h3>
             <div class="text-center">
