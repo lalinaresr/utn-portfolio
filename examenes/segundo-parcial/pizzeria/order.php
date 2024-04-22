@@ -1,5 +1,7 @@
 <?php
-require_once 'config.php';
+require_once 'connection.php';
+
+$title = APP_NAME . ' | Respuesta';
 
 $styles = [
 	LAYOUTS_PATH . '/css/p.css'
@@ -7,6 +9,6 @@ $styles = [
 
 include_once PARTIALS_PATH . '/header.php';
 include_once PARTIALS_PATH . '/basic/navbar.php';
-include_once PARTIALS_PATH . '/pi/container.php';
+include_once PARTIALS_PATH . '/pi/response.php';
 include_once PARTIALS_PATH . '/basic/footer.php';
 include_once PARTIALS_PATH . '/footer.php';

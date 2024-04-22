@@ -120,7 +120,7 @@ $projects = [
         'type' => 'examen',
         'title' => 'Pizzería',
         'description' => 'Examen tipo B del segundo parcial el cual consistía crear un simulador de ventas de pizzas. El usuario seleccionaba su especialidad, tamaño y la cantidad de pizzas que quería y se calculaba un subtotal y total de esa venta. Los datos se almacenaban en forma de orden de pedido para tener el control de esa compra.',
-        'link' => 'examenes/segundo-parcial/pizzeria/',
+        'link' => 'examenes/segundo-parcial/pizzeria',
         'image' => 'public/images/projects/pi.png'
     ]
 ];
