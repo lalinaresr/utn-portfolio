@@ -1,4 +1,4 @@
-<form action="<?= APP_URL; ?>/show.php" method="POST" class="form-horizontal">
+<form action="<?= APP_URL; ?>/response.php" method="POST" class="form-horizontal">
     <div class="form-group">
         <label for="model" class="col-sm-3 control-label">Modelo:</label>
         <div class="col-sm-8">

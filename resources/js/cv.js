@@ -8,42 +8,42 @@ jQuery(document).ready(function ($) {
 
 	$("#btn-info-show").on('click', function (e) {
 		e.preventDefault();
-		$('#allTabs a[href="#infoTab"]').tab('show');
+		$('#all-tabs a[href="#info-tab"]').tab('show');
 	});
 
 	$("#btn-education-show").on('click', function (e) {
 		e.preventDefault();
-		$('#allTabs a[href="#educationTab"]').tab('show');
+		$('#all-tabs a[href="#education-tab"]').tab('show');
 	});
-	
+
 	$("#btn-experience-show").on('click', function (e) {
 		e.preventDefault();
-		$('#allTabs a[href="#experienceTab"]').tab('show');
+		$('#all-tabs a[href="#experience-tab"]').tab('show');
 	});
 
 	$(".btn-back").on('click', function (e) {
 		e.preventDefault();
-		$('#allTabs a[href="#mainTab"]').tab('show');
+		$('#all-tabs a[href="#main-tab"]').tab('show');
 	});
 
-	$('.btn-education-tab').click(function () {
-		let requiredCheckboxes = $('.the-courses :checkbox[required]');
-		requiredCheckboxes.change(function () {
-			if (requiredCheckboxes.is(':checked')) {
-				requiredCheckboxes.removeAttr('required');
+	$(".btn-education-tab").click(() => {
+		let checkboxes = $(".the-courses :checkbox[required]");
+		checkboxes.change(() => {
+			if (checkboxes.is(':checked')) {
+				checkboxes.removeAttr('required');
 			} else {
-				requiredCheckboxes.attr('required', 'required');
+				checkboxes.attr('required', true);
 			}
 		});
 	});
 
-	$('.btn-experience-tab').click(function () {
-		let requiredCheckboxes = $('.the-knowledges :checkbox[required]');
-		requiredCheckboxes.change(function () {
-			if (requiredCheckboxes.is(':checked')) {
-				requiredCheckboxes.removeAttr('required');
+	$(".btn-experience-tab").click(() => {
+		let checkboxes = $(".the-knowledges :checkbox[required]");
+		checkboxes.change(() => {
+			if (checkboxes.is(':checked')) {
+				checkboxes.removeAttr('required');
 			} else {
-				requiredCheckboxes.attr('required', 'required');
+				checkboxes.attr('required', true);
 			}
 		});
 	});

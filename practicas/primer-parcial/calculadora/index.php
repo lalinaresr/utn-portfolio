@@ -7,8 +7,6 @@ $styles = [
 
 include_once PARTIALS_PATH . '/header.php';
 include_once PARTIALS_PATH . '/basic/navbar.php';
-echo '<div class="container"><div class="row mt-4">';
-include_once PARTIALS_PATH . '/ob/form.php';
-echo '</div></div>';
+include_once PARTIALS_PATH . '/ob/index.php';
 include_once PARTIALS_PATH . '/basic/footer.php';
 include_once PARTIALS_PATH . '/footer.php';

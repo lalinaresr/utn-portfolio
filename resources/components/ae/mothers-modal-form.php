@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <h4 class="modal-title text-center">Solicitud para madres solteras</h4>
             </div>
-            <form action="<?= APP_URL; ?>/show.php" method="POST" id="mothers-form">
+            <form action="<?= APP_URL; ?>/response.php" method="POST" id="mothers-form">
                 <div class="modal-body">
                     <input type="hidden" name="mothers-form" value="1">
                     <div class="form-group">

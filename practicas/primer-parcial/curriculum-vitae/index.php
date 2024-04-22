@@ -14,9 +14,5 @@ $scripts = [
 ];
 
 include_once PARTIALS_PATH . '/header.php';
-include_once PARTIALS_PATH . '/cv/tabs.php';
-echo '<div class="container"><div class="row mt-4">';
-include_once PARTIALS_PATH . '/cv/sidebar.php';
-include_once PARTIALS_PATH . '/cv/forms.php';
-echo '</div></div>';
+include_once PARTIALS_PATH . '/cv/index.php';
 include_once PARTIALS_PATH . '/footer.php';

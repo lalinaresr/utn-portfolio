@@ -1,6 +1,11 @@
 <?php
 require_once 'config.php';
 
+if (count($_POST) == 0) {
+   header('Location: ' . APP_URL);
+   exit;
+}
+
 $title = APP_NAME . ' | Verificar compra';
 
 $styles = [
@@ -9,8 +14,6 @@ $styles = [
 
 include_once PARTIALS_PATH . '/header.php';
 include_once PARTIALS_PATH . '/basic/navbar.php';
-echo '<div class="container"><div class="row mt-4">';
 include_once PARTIALS_PATH . '/ac/response.php';
-echo '</div></div>';
 include_once PARTIALS_PATH . '/basic/footer.php';
 include_once PARTIALS_PATH . '/footer.php';
