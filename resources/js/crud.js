@@ -5,10 +5,19 @@ jQuery(document).ready(function ($) {
     const STORE = `${APP_URL}/projects/store.php`;
     const FIND = `${APP_URL}/projects/find.php`;
     const UPDATE = `${APP_URL}/projects/update.php`;
+    // const STORE_OP_UPDATE = `${APP_URL}/projects/store_or_update.php`;
     const DESTROY = `${APP_URL}/projects/destroy.php`;
 
     function message(title, text, icon) {
-        Swal.fire({ title, text, icon });
+        const BS_SWAL = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-primary",
+                cancelButton: "btn btn-default"
+            },
+            buttonsStyling: false
+        });
+
+        BS_SWAL.fire({ title, text, icon });
     }
 
     let projects_table = new DataTable('#projects-table', {
@@ -19,16 +28,40 @@ jQuery(document).ready(function ($) {
         layout: {
             topStart: {
                 buttons: [
-                    { "extend": 'excelHtml5', "text": '<i class="fa fa-file-excel-o" aria-hidden="true"></i> XLSX', "className": 'btn btn-success' },
-                    { "extend": 'csvHtml5', "text": '<i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF', "className": 'btn btn-danger' },
-                    { "extend": 'pdfHtml5', "text": '<i class="fa fa-file-excel-o" aria-hidden="true"></i> CSV', "className": 'btn btn-success' }
+                    {
+                        extend: 'excelHtml5',
+                        className: 'btn btn-success',
+                        text: '<i class="fa fa-file-excel-o" aria-hidden="true"></i> XLSX',
+                        exportOptions: {
+                            columns: [0, 1, 3]
+                        }
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        className: 'btn btn-danger',
+                        text: '<i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF',
+                        exportOptions: {
+                            columns: [0, 1, 3]
+                        },
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL',
+                        download: 'open'
+                    },
+                    {
+                        extend: 'csvHtml5',
+                        className: 'btn btn-success',
+                        text: '<i class="fa fa-file-excel-o" aria-hidden="true"></i> CSV',
+                        exportOptions: {
+                            columns: [0, 1, 3]
+                        }
+                    }
                 ]
             }
         }
     });
     projects_table.column('3').order('desc').draw();
 
-    $("#form-store").on('submit', function (e) {
+    $("#store-form").on('submit', function (e) {
         e.preventDefault();
 
         let data = $(this).serialize();
@@ -40,16 +73,17 @@ jQuery(document).ready(function ($) {
             type,
             dataType: 'json',
             beforeSend: () => {
-                $("#btn-store").attr('disabled', true);
-                $("#btn-store").text('Procesando...');
-            }, success: function (response) {
-                $("#btn-store").removeAttr('disabled');
-                $("#btn-store").html('<span class="glyphicon glyphicon-floppy-disk"></span> Guardar');
+                $("#store-btn").attr('disabled', true);
+                $("#store-btn").text('Procesando...');
+            },
+            success: function (response) {
+                $("#store-btn").removeAttr('disabled');
+                $("#store-btn").html('<span class="glyphicon glyphicon-floppy-disk"></span> Guardar');
 
-                $("#form-crud-store").modal('hide');
+                $("#create-modal").modal('hide');
 
                 if (response.type == 'success') {
-                    $("#form-store").trigger('reset');
+                    $("#store-form").trigger('reset');
                     projects_table.row.add([
                         response?.data.type,
                         response?.data.name,
@@ -74,10 +108,10 @@ jQuery(document).ready(function ($) {
     $("#projects-table").on('click', '.btn-edit', function (e) {
         e.preventDefault();
 
-        let id = $(this).data('element');
         let key = $(this).data('key');
+        let id = $(this).data('element');
 
-        $("#form-crud-update").modal('show');
+        $("#edit-modal").modal('show');
 
         $.ajax({
             data: { id },
@@ -85,30 +119,30 @@ jQuery(document).ready(function ($) {
             type: 'POST',
             dataType: 'json',
             beforeSend: () => {
-                $("#form-update [name=type]").val('...');
-                $("#form-update [name=name]").val('...');
-                $("#form-update [name=link]").val('...');
-                $("#form-update [name=image]").val('...');
-                $("#form-update [name=description]").val('...');
+                $("#update-form [name=type]").val();
+                $("#update-form [name=name]").val();
+                $("#update-form [name=link]").val();
+                $("#update-form [name=image]").val();
+                $("#update-form [name=description]").val();
             },
-            success: function (response) {
-                $("#form-update [name=key]").val(key);
-                $("#form-update [name=element]").val(response?.data.id);
-                $("#form-update [name=type]").val(response?.data.type_id);
-                $("#form-update [name=name]").val(response?.data.name);
-                $("#form-update [name=link]").val(response?.data.link);
-                $("#form-update [name=image]").val(response?.data.image);
-                $("#form-update [name=description]").val(response?.data.description);
+            success: response => {
+                $("#update-form [name=key]").val(key);
+                $("#update-form [name=element]").val(id);
+                $("#update-form [name=type]").val(response?.data.type_id);
+                $("#update-form [name=name]").val(response?.data.name);
+                $("#update-form [name=link]").val(response?.data.link);
+                $("#update-form [name=image]").val(response?.data.image);
+                $("#update-form [name=description]").val(response?.data.description);
             }
         });
     });
 
-    $("#form-update").on('submit', function (e) {
+    $("#update-form").on('submit', function (e) {
         e.preventDefault();
 
-        let data = $(this).serialize();
         let type = $(this).attr('method');
-        let key = $("form-update [name=key]").val();
+        let data = $(this).serialize();
+        let key = $("#update-form [name=key]").val();
 
         $.ajax({
             url: UPDATE,
@@ -116,13 +150,14 @@ jQuery(document).ready(function ($) {
             type,
             dataType: 'json',
             beforeSend: () => {
-                $("#btn-update").attr('disabled', true);
-                $("#btn-update").text('Procesando...');
-            }, success: function (response) {
-                $("#btn-update").removeAttr('disabled');
-                $("#btn-update").html('<span class="glyphicon glyphicon-refresh"></span> Actualizar');
+                $("#update-btn").attr('disabled', true);
+                $("#update-btn").text('Procesando...');
+            },
+            success: response => {
+                $("#update-btn").removeAttr('disabled');
+                $("#update-btn").html('<span class="glyphicon glyphicon-refresh"></span> Actualizar');
 
-                $("#form-crud-update").modal('hide');
+                $("#edit-modal").modal('hide');
 
                 if (response.type == 'success') {
                     projects_table.row(key).data([
@@ -149,8 +184,8 @@ jQuery(document).ready(function ($) {
     $("#projects-table").on('click', '.btn-delete', function (e) {
         e.preventDefault();
 
-        let id = $(this).data('element');
         let key = $(this).data('key');
+        let id = $(this).data('element');
 
         Swal.fire({
             title: '¿Estas segur@?',
@@ -167,25 +202,15 @@ jQuery(document).ready(function ($) {
                     url: DESTROY,
                     type: 'POST',
                     dataType: 'json',
-                    success: function (response) {
+                    success: response => {
                         if (response.type == 'success') {
-                            projects_table
-                                .row(key)
-                                .remove()
-                                .draw();
-
+                            projects_table.row(key).remove().draw();
                             message('Éxito', 'El proyecto fue eliminado con éxito', 'success');
                         }
                     }
                 });
-            } else if (
-                result.dismiss === Swal.DismissReason.cancel
-            ) {
-                Swal.fire({
-                    title: 'Recordatorio',
-                    text: 'Recuerda que eliminar un registro es una acción que no podrá deshacerse',
-                    icon: 'info'
-                });
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                message('Recordatorio', 'Recuerda que eliminar un registro es una acción que no podrá deshacerse', 'info');
             }
         });
     });

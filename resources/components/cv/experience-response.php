@@ -18,16 +18,22 @@ $last_job = $_POST['last_job'];
  */
 $knowledges = $_POST['knowledges'];
 
-echo '<tr><th colspan="2">Experiencia</th></tr>
-<tr>
-    <th>Primer empleo</th>
-    <td>' . $first_job . '</td>
-</tr>
-<tr>
-    <th>Último empleo</th>
-    <td>' . $last_job . '</td>
-</tr>
-<tr>
-    <th>Conocimientos</th>
-    <td>' . implode(', ', $knowledges) . '</td>
-</tr>';
+echo '<thead>
+    <tr>
+        <th colspan="2">Experiencia</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th>Primer empleo</th>
+        <td>' . $first_job . '</td>
+    </tr>
+    <tr>
+        <th>Último empleo</th>
+        <td>' . $last_job . '</td>
+    </tr>
+    <tr>
+        <th>Conocimientos</th>
+        <td>' . implode(', ', $knowledges) . '</td>
+    </tr>
+</tbody>';

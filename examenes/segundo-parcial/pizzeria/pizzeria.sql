@@ -42,11 +42,11 @@ CREATE TABLE `detalle_venta` (
 --
 
 INSERT INTO `detalle_venta` (`id_venta`, `ingredientes`, `tamano`, `precio`, `cantidad`, `total`) VALUES
-(1, 'Peperoni', '0', 90.00, 5, 99.99),
-(2, 'Peperoni', 'Grande', 90.00, 5, 522.00),
-(3, 'Tres Quesos', 'Grande', 110.00, 10, 1276.00),
-(4, 'Tres Quesos', 'Grande', 110.00, 10, 1276.00),
-(5, 'Tres Quesos', 'Grande', 110.00, 10, 1276.00),
+(1, 'Pepperoni', Grande, 90.00, 1, 90.00),
+(2, 'Pepperoni', 'Grande', 90.00, 5, 522.00),
+(3, 'Tres quesos', 'Grande', 110.00, 10, 1276.00),
+(4, 'Tres quesos', 'Grande', 110.00, 10, 1276.00),
+(5, 'Tres quesos', 'Grande', 110.00, 10, 1276.00),
 (6, 'Suprema', 'Chica', 60.00, 2, 139.20);
 
 -- --------------------------------------------------------

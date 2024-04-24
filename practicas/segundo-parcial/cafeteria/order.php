@@ -1,14 +1,17 @@
 <?php
 session_start();
 require_once 'config.php';
-require_once 'data.php';
+require_once 'globals.php';
 
-if (!isset($_POST['products']) || count($_POST['products']) == 0) {
+$_SESSION['products'] = null;
+if (isset($_POST['products']) and count($_POST['products']) > 0) {   
+   $_SESSION['products'] = $_POST['products'];
+} else {
    header('Location: ' . APP_URL . '/products.php');
    exit;
 }
 
-$title = APP_NAME . ' | Completar pedido';
+$title = APP_NAME . ' | Completar orden';
 
 $styles = [
    RESOURCES_PATH . '/css/libs/animate.css',

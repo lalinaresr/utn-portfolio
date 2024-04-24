@@ -5,34 +5,38 @@ require_once LIBRARIES_PATH . '/fpdf/fpdf.php';
 
 class PDF extends FPDF
 {
-	public function Header()
+	public function __construct()
 	{
-		$this->Image(IMAGES_PATH . '/c/site/logo.png', 90, 10, 30, 25);
-		$this->SetFont('Arial', 'B', 12);		
+		if (!isset($_SESSION['products']) || !isset($_SESSION['amounts'])) {
+			header('Location: ' . APP_URL . '/products.php');
+			exit;
+		}
+		parent::__construct();
 	}
 
-	public function Footer()
+	public function Header()
 	{
-		$this->SetY(-15);
-		$this->SetFont('Arial', 'I', 8);
-		$this->Cell(0, 10, 'Pagina ' . $this->PageNo() . '/{nb}', 0, 0, 'C');
+		$this->SetFont('Arial', 'B', 15);
+		$this->Image(IMAGES_PATH . '/c/site/logo.png', 90, 10, 30, 25);
+		$this->Ln(30);
 	}
 
 	public function FillTable()
 	{
-		$this->Ln(30);
+		$amount = $total = 0;
+
 		$this->Cell(80, 10, 'Nombre', 1, 0, 'C');
 		$this->Cell(37, 10, 'Precio', 1, 0, 'C');
 		$this->Cell(37, 10, 'Cantidad', 1, 0, 'C');
 		$this->Cell(37, 10, 'Subtotal', 1, 0, 'C');
 
-		$amount = $total = 0;
-
-		foreach ($_SESSION['products'] as $key => $product) {
-			$amount_by_product = $_SESSION['amounts']['amount-' . $product['id']];
+		foreach ($_SESSION['products'] as $product) {
+			$amount_by_product = $_SESSION['amounts'][$product['id']];
 			$amount += $amount_by_product;
 			$total += ($amount_by_product * $product['price']);
+
 			$this->Ln();
+
 			$this->Cell(80, 10, iconv('UTF-8', 'windows-1252', $product['name']), 1, 0, 'C');
 			$this->Cell(37, 10, '$' . number_format($product['price'], 2), 1, 0, 'C');
 			$this->Cell(37, 10, $amount_by_product, 1, 0, 'C');
@@ -44,8 +48,15 @@ class PDF extends FPDF
 		$this->Cell(37, 10, '$' . number_format($total, 2), 1, 0, 'C');
 
 		$this->Ln();
-		$this->SetFont('Arial', 'I', 8);
+		$this->SetFont('Arial', 'I', 10);
 		$this->Cell(191, 10, iconv('UTF-8', 'windows-1252', 'Su pedido fue dado de alta con éxito a las ' . date('H:i:s') . ' del ' . date('d-m-Y')), 0, 0, 'L');
+	}
+
+	public function Footer()
+	{
+		$this->SetY(-15);
+		$this->SetFont('Arial', 'I', 8);
+		$this->Cell(0, 10, iconv('UTF-8', 'windows-1252', 'Página ') . $this->PageNo() . '/{nb}', 0, 0, 'C');
 	}
 }
 

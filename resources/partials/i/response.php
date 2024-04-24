@@ -1,9 +1,9 @@
 <div class="container">
-	<div class="row mt-4">
-		<div class="col-md-12">
+    <div class="row mt-4">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <?php include_once COMPONENTS_PATH . '/i/real-state-response.php'; ?>
+                    <?php include_once COMPONENTS_PATH . '/i/response.php'; ?>
                 </div>
             </div>
             <a href="<?= APP_URL; ?>" class="btn btn-default"><i class="fa fa-fw fa-arrow-left"></i> Regresar</a>

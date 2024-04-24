@@ -7,10 +7,21 @@
                     <div class="col-md-12 contact-grid1">
                         <form action="<?= APP_URL; ?>/checkout.php" method="POST">
                             <input type="hidden" name="products-order" value="1">
-                            <table class="table table-bordered table-hover table-condensed table-centered">                                
+                            <table class="table table-bordered table-condensed table-hover table-centered">
+                                <thead>
+                                    <tr class="warning">
+                                        <th colspan="4">Complete su pedido</th>
+                                    </tr>
+                                    <tr class="warning">
+                                        <th>Nombre</th>
+                                        <th>Descripción</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
                                 <?php include_once COMPONENTS_PATH . '/c/products-order.php'; ?>
                             </table>
-                            <button type="submit" class="btn main-btn"><span class="glyphicon glyphicon-send"></span> Ordenar</button>
+                            <button type="submit" class="btn main-btn"><span class="glyphicon glyphicon-send"></span> Completar orden</button>
                         </form>
                     </div>
                 </div>

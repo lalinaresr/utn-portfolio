@@ -6,6 +6,7 @@
  */
 $html = '';
 
+$html .= '<tbody>';
 foreach ($projects as $key => $project) {
     $html .= '<tr>
         <td>' . $project['type'] . '</td>
@@ -22,5 +23,6 @@ foreach ($projects as $key => $project) {
         </td>
     </tr>';
 }
+$html .= '</tbody>';
 
 echo $html;

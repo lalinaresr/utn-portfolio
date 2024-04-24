@@ -3,10 +3,10 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?= APP_NAME; ?> | Listado</h3>
+                    <h3 class="panel-title">Listado</h3>
                 </div>
                 <div class="panel-body">
-                    <table id="projects-table" class="table table-bordered table-responsive table-hover">
+                    <table id="projects-table" class="table table-bordered table-condensed table-hover table-centered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Tipo</th>
@@ -20,7 +20,7 @@
                     </table>
                 </div>
                 <div class="panel-footer">
-                    <a href="#" class="btn btn-default" data-toggle="modal" data-target="#form-crud-store"><span class="glyphicon glyphicon-plus"></span> Crear</a>
+                    <a href="#" class="btn btn-default" data-toggle="modal" data-target="#create-modal"><span class="glyphicon glyphicon-plus"></span> Crear</a>
                 </div>
             </div>
         </div>

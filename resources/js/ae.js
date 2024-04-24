@@ -1,33 +1,31 @@
 jQuery(document).ready(function ($) {
 
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-            confirmButton: "btn btn-info",
-            cancelButton: "btn btn-default"
-        },
-        buttonsStyling: false
-    });
+    function message(title, text, icon) {
+        const BS_SWAL = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-primary",
+                cancelButton: "btn btn-default"
+            },
+            buttonsStyling: false
+        });
+
+        BS_SWAL.fire({ title, text, icon });
+    }
 
     $("#students-form").ajaxForm({
         url: $(this).attr('action'),
         type: $(this).attr('method'),
         dataType: 'json',
-        beforeSend: function () {
+        beforeSend: () => {
             $("#btn-students-form").attr('disabled', true);
             $("#btn-students-form").html('Procesando <i class="fa fa-spinner fa-spin fa-fw"></i>');
         },
-        success: function (response) {
+        success: response => {
             $("#btn-students-form").removeAttr('disabled');
             $("#btn-students-form").html('<i class="fa fa-fw fa-send"></i> Enviar');
             $("#students-modal").modal('hide');
 
-            setTimeout(function () {
-                swalWithBootstrapButtons.fire({
-                    title: response.type == 'success' ? 'Éxito' : 'Oops',
-                    text: response.text,
-                    icon: response.type
-                });
-            }, 1000);
+            setTimeout(() => message((response.type == 'success' ? 'Éxito' : 'Oops'), response.text, response.type), 1000);
         }
     });
 
@@ -37,22 +35,16 @@ jQuery(document).ready(function ($) {
         url: $(this).attr('action'),
         type: $(this).attr('method'),
         dataType: 'json',
-        beforeSend: function () {
+        beforeSend: () => {
             $("#btn-mothers-form").attr('disabled', true);
             $("#btn-mothers-form").html('Procesando <i class="fa fa-spinner fa-spin fa-fw"></i>');
         },
-        success: function (response) {
+        success: response => {
             $("#btn-mothers-form").removeAttr('disabled');
             $("#btn-mothers-form").html('<i class="fa fa-fw fa-send"></i> Enviar');
             $("#mothers-modal").modal('hide');
 
-            setTimeout(function () {
-                swalWithBootstrapButtons.fire({
-                    title: response.type == 'success' ? 'Éxito' : 'Oops',
-                    text: response.text,
-                    icon: response.type
-                });
-            }, 1000);
+            setTimeout(() => message((response.type == 'success' ? 'Éxito' : 'Oops'), response.text, response.type), 1000);
         }
     });
 
@@ -62,22 +54,16 @@ jQuery(document).ready(function ($) {
         url: $(this).attr('action'),
         type: $(this).attr('method'),
         dataType: 'json',
-        beforeSend: function () {
+        beforeSend: () => {
             $("#btn-adults-form").attr('disabled', true);
             $("#btn-adults-form").html('Procesando <i class="fa fa-spinner fa-spin fa-fw"></i>');
         },
-        success: function (response) {
+        success: response => {
             $("#btn-adults-form").removeAttr('disabled');
             $("#btn-adults-form").html('<i class="fa fa-fw fa-send"></i> Enviar');
             $("#adults-modal").modal('hide');
 
-            setTimeout(function () {
-                swalWithBootstrapButtons.fire({
-                    title: response.type == 'success' ? 'Éxito' : 'Oops',
-                    text: response.text,
-                    icon: response.type
-                });
-            }, 1000);
+            setTimeout(() => message((response.type == 'success' ? 'Éxito' : 'Oops'), response.text, response.type), 1000);
         }
     });
 

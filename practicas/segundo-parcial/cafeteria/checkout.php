@@ -1,11 +1,14 @@
 <?php
 session_start();
 require_once 'config.php';
-require_once 'data.php';
+require_once 'globals.php';
 
-if (!isset($_SESSION['products']) || count($_SESSION['products']) == 0 || count($_POST) == 0) {
+$_SESSION['amounts'] = null;
+if (isset($_SESSION['products']) and isset($_POST['products-order'])) {
+   $_SESSION['amounts'] = $_POST;
+} else {
    header('Location: ' . APP_URL . '/products.php');
-   exit;
+   exit;   
 }
 
 $title = APP_NAME . ' | Verificar compra';

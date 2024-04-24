@@ -21,8 +21,8 @@
     <div class="form-group">
         <label class="col-sm-3 control-label">Sexo:</label>
         <div class="col-sm-8">
-            <label class="radio-inline"><input type="radio" name="sex" value="M">M</label>
-            <label class="radio-inline"><input type="radio" name="sex" value="F" required="true">F</label>
+            <label class="radio-inline"><input type="radio" name="sex" value="H">H</label>
+            <label class="radio-inline"><input type="radio" name="sex" value="M" required="true">M</label>
         </div>
     </div>
     <div class="form-group">

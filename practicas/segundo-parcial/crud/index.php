@@ -26,7 +26,7 @@ $scripts = [
 include_once PARTIALS_PATH . '/header.php';
 include_once PARTIALS_PATH . '/basic/navbar.php';
 include_once PARTIALS_PATH . '/crud/index.php';
-include_once PARTIALS_PATH . '/crud/create.php';
-include_once PARTIALS_PATH . '/crud/edit.php';
+include_once PARTIALS_PATH . '/crud/create-modal.php';
+include_once PARTIALS_PATH . '/crud/edit-modal.php';
 include_once PARTIALS_PATH . '/basic/footer.php';
 include_once PARTIALS_PATH . '/footer.php';

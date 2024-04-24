@@ -1,5 +1,5 @@
 <div class="row">
-    <form action="<?= APP_URL; ?>/order.php" method="POST" class="form-products">
+    <form action="<?= APP_URL; ?>/order.php" method="POST" id="products-form">
         <?php for ($i = 0; $i < $rows; $i++) : ?>
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="price-mainheading"><?= $columns[$i]; ?></div>
@@ -16,7 +16,7 @@
             </div>
         <?php endfor; ?>
         <div class="col-lg-12">
-            <button type="submit" class="btn btn-block main-btn btn-products-order"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</button>
+            <button type="submit" class="btn btn-block main-btn btn-products-form"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</button>
         </div>
     </form>
 </div>

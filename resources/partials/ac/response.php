@@ -9,7 +9,7 @@
                                 <th colspan="2">Verificar compra</th>
                             </tr>
                         </thead>
-                        <?php include_once COMPONENTS_PATH . '/ac/agency-response.php'; ?>
+                        <?php include_once COMPONENTS_PATH . '/ac/response.php'; ?>
                     </table>
                 </div>
             </div>

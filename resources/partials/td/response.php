@@ -4,10 +4,12 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <table class="table table-bordered table-condensed table-centered">
-                        <tr class="td">
-                            <th colspan="2">Verificar compra</th>
-                        </tr>
-                        <?php include_once COMPONENTS_PATH . '/td/shop-response.php'; ?>
+                        <thead>
+                            <tr class="td">
+                                <th colspan="2">Verificar compra</th>
+                            </tr>
+                        </thead>
+                        <?php include_once COMPONENTS_PATH . '/td/response.php'; ?>
                     </table>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <?php
 require_once 'config.php';
-require_once 'data.php';
+require_once 'globals.php';
 
 $title = APP_NAME . ' | Productos';
 

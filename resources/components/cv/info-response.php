@@ -36,28 +36,34 @@ $phone = $_POST['phone'];
  */
 $email = $_POST['email'];
 
-echo '<tr><th colspan="2">Información personal</th></tr>
-<tr>
-    <th>Nombre completo</th>
-    <td>' . $fullname . '</td>
-</tr>
-<tr>
-    <th>Fecha de nacimiento</th>
-    <td>' . $birthday . '</td>
-</tr>
-<tr>
-    <th>Dirección</th>
-    <td>' . $address . '</td>
-</tr>
-<tr>
-    <th>Sexo</th>
-    <td>' . ($sex == 'M' ? 'Masculino' : 'Femenino') . '</td>
-</tr>
-<tr>
-    <th>Teléfono</th>
-    <td>' . $phone . '</td>
-</tr>
-<tr>
-    <th>Correo electrónico</th>
-    <td>' . $email . '</td>
-</tr>';
+echo '<thead>
+    <tr>
+        <th colspan="2">Información personal</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th>Nombre completo</th>
+        <td>' . $fullname . '</td>
+    </tr>
+    <tr>
+        <th>Fecha de nacimiento</th>
+        <td>' . $birthday . '</td>
+    </tr>
+    <tr>
+        <th>Dirección</th>
+        <td>' . $address . '</td>
+    </tr>
+    <tr>
+        <th>Sexo</th>
+        <td>' . ($sex == 'H' ? 'Masculino' : 'Femenino') . '</td>
+    </tr>
+    <tr>
+        <th>Teléfono</th>
+        <td>' . $phone . '</td>
+    </tr>
+    <tr>
+        <th>Correo electrónico</th>
+        <td>' . $email . '</td>
+    </tr>
+</tbody>';

@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
 
-    $('.btn-products-order').click(function () {
-        let checkboxes = $('.form-products :checkbox[required]');
+    $(".btn-products-form").click(() => {
+        let checkboxes = $("#products-form :checkbox[required]");
         checkboxes.change(() => {
             if (checkboxes.is(':checked')) {
                 checkboxes.removeAttr('required');

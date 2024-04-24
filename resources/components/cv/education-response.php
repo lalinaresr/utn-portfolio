@@ -18,16 +18,22 @@ $university = $_POST['university'];
  */
 $courses = $_POST['courses'];
 
-echo '<tr><th colspan="2">Educación</th></tr>
-<tr>
-    <th>Preparatoria</th>
-    <td>' . $preparatory . '</td>
-</tr>
-<tr>
-    <th>Universidad</th>
-    <td>' . $university . '</td>
-</tr>
-<tr>
-    <th>Cursos</th>
-    <td>' . implode(', ', $courses) . '</td>
-</tr>';
+echo '<thead>
+    <tr>
+        <th colspan="2">Educación</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th>Preparatoria</th>
+        <td>' . $preparatory . '</td>
+    </tr>
+    <tr>
+        <th>Universidad</th>
+        <td>' . $university . '</td>
+    </tr>
+    <tr>
+        <th>Cursos</th>
+        <td>' . implode(', ', $courses) . '</td>
+    </tr>
+</tbody>';

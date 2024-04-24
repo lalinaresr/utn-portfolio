@@ -1,32 +1,13 @@
 <?php
 
-$_SESSION['amounts'] = null;
-if (isset($_POST['products-order']) && count($_POST) > 0) {
-    $_SESSION['amounts'] = $_POST;
-}
-
 # Ordenamos el arreglo con los productos seleccionados por el usuario
 asort($_SESSION['products']);
 
 $amount = $total = 0;
 
-$html .= '<thead>
-<tr class="warning">
-    <th colspan="5">Verifique su compra e imprima su ticket</th>
-</tr>
-<tr class="warning">
-    <th>Nombre</th>
-    <th>Descripción</th>
-    <th>Precio</th>
-    <th>Cantidad</th>
-    <th>Subtotal</th>
-</tr>
-</thead>
-<tbody>';
-
-foreach ($_SESSION['products'] as $key => $product) {
-    $amount_by_product = $_POST['amount-' . $product['id']];
-
+$html .= '<tbody>';
+foreach ($_SESSION['products'] as $product) {
+    $amount_by_product = $_SESSION['amounts'][$product['id']];
     $amount += $amount_by_product;
     $total += ($amount_by_product * $product['price']);
 

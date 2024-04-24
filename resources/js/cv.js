@@ -6,17 +6,17 @@ jQuery(document).ready(function ($) {
 		singleItem: true
 	});
 
-	$("#btn-info-show").on('click', function (e) {
+	$("#btn-show-info").on('click', function (e) {
 		e.preventDefault();
 		$('#all-tabs a[href="#info-tab"]').tab('show');
 	});
 
-	$("#btn-education-show").on('click', function (e) {
+	$("#btn-show-education").on('click', function (e) {
 		e.preventDefault();
 		$('#all-tabs a[href="#education-tab"]').tab('show');
 	});
 
-	$("#btn-experience-show").on('click', function (e) {
+	$("#btn-show-experience").on('click', function (e) {
 		e.preventDefault();
 		$('#all-tabs a[href="#experience-tab"]').tab('show');
 	});
@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	$(".btn-education-tab").click(() => {
-		let checkboxes = $(".the-courses :checkbox[required]");
+		let checkboxes = $(".courses :checkbox[required]");
 		checkboxes.change(() => {
 			if (checkboxes.is(':checked')) {
 				checkboxes.removeAttr('required');
@@ -38,7 +38,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	$(".btn-experience-tab").click(() => {
-		let checkboxes = $(".the-knowledges :checkbox[required]");
+		let checkboxes = $(".knowledges :checkbox[required]");
 		checkboxes.change(() => {
 			if (checkboxes.is(':checked')) {
 				checkboxes.removeAttr('required');

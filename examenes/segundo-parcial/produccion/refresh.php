@@ -15,6 +15,5 @@ $plants = [
 foreach ($plants as $plant) {
     $queries .= sprintf("INSERT INTO plantas VALUES('%d', '%s', '%d', '%d') ON DUPLICATE KEY UPDATE planta = '%s', unidades_producidas = '%d', unidades_defectuosas = '%d';", $plant['planta_id'], $plant['planta'], $plant['unidades_producidas'], $plant['unidades_defectuosas'], $plant['planta'], $plant['unidades_producidas'], $plant['unidades_defectuosas']);
 }
-echo mysqli_multi_query($connection, $queries) ? 'Actualización exitosa' : 'Algo salió mal en la actualización de los datos';
 
-echo '<hr><a href="' . $_SERVER['PHP_SELF'] . '">Recargar</a>';
+echo mysqli_multi_query($connection, $queries) ? 'Actualización exitosa' : 'Algo salió mal en la actualización de los datos';

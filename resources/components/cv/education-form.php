@@ -12,16 +12,15 @@
             <textarea id="university" name="university" class="form-control" required="true" minlenght="5" maxlenght="70"></textarea>
         </div>
     </div>
-    <div class="form-group the-courses">
+    <div class="form-group courses">
         <label class="col-sm-3 control-label">Cursos:</label>
         <div class="col-sm-8">
-            <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="Java" required>Java</label>
             <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="PHP" required>PHP</label>
+            <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="Java" required>Java</label>
             <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="Python" required>Phyton</label>
             <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="JavaScript" required>JavaScript</label>
-            <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="C++" required>C++</label>
             <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="Ruby" required>Ruby</label>
-            <!-- <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="Otros" required>Otros</label> -->
+            <label class="checkbox-inline"><input type="checkbox" name="courses[]" value="Otro" required>Otro</label>
         </div>
     </div>
     <div class="form-group">

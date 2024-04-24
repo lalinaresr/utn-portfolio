@@ -5,9 +5,9 @@ require_once 'results/index.php';
 $title = APP_NAME . ' | Historial';
 
 $styles = [
-	RESOURCES_PATH . '/css/libs/dataTables.bootstrap.min.css',
+    RESOURCES_PATH . '/css/libs/dataTables.bootstrap.min.css',
     RESOURCES_PATH . '/css/libs/buttons.bootstrap.min.css',
-	RESOURCES_PATH . '/css/p.css'
+    RESOURCES_PATH . '/css/p.css'
 ];
 
 $scripts = [

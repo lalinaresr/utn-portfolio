@@ -1,8 +1,9 @@
+<input type="hidden" name="key"><input type="hidden" name="element">
 <div class="col-md-6">
     <div class="form-group">
         <label for="type">Tipo:</label>
         <select name="type" id="type" class="form-control" required>
-            <option value selected>Seleccione tipo de proyecto</option>
+            <option disabled value selected>Seleccione tipo de proyecto</option>
             <?php foreach ($types as $type) : ?>
                 <option value="<?= $type['id']; ?>"><?= $type['name']; ?></option>
             <?php endforeach; ?>

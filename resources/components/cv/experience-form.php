@@ -12,16 +12,15 @@
             <textarea id="last_job" name="last_job" class="form-control" required="true" minlenght="5" maxlenght="70"></textarea>
         </div>
     </div>
-    <div class="form-group the-knowledges">
+    <div class="form-group knowledges">
         <label class="col-sm-3 control-label">Conocimientos:</label>
         <div class="col-sm-8">
-            <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="Java" required>Java</label>
             <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="PHP" required>PHP</label>
+            <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="Java" required>Java</label>
             <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="Python" required>Phyton</label>
             <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="JavaScript" required>JavaScript</label>
-            <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="C++" required>C++</label>
             <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="Ruby" required>Ruby</label>
-            <!-- <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="Otros" required>Otros</label> -->
+            <label class="checkbox-inline"><input type="checkbox" name="knowledges[]" value="Otro" required>Otro</label>
         </div>
     </div>
     <div class="form-group">
