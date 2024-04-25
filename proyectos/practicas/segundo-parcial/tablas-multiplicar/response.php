@@ -9,7 +9,7 @@ if (count($_POST) == 0) {
 $title = APP_NAME . ' | Resultados';
 
 $styles = [
-   RESOURCES_PATH . '/css/tm.css'
+   RESOURCES_URL . '/css/tm.css'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

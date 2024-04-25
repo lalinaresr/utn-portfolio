@@ -77,7 +77,7 @@ function total_by_plan(string $payment_plan, string $version, string $model): fl
 echo '<tbody>
     <tr>
         <td colspan="2">
-            <img src="' . RESOURCES_PATH . "/images/ac/{$model}.jpg" . '" class="img-responsive center-block" width="40%" title="' . $model . '">
+            <img src="' . RESOURCES_URL . "/images/ac/{$model}.jpg" . '" class="img-responsive center-block" width="40%" title="' . $model . '">
         </td>
     </tr>
     <tr>

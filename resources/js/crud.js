@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
                         exportOptions: {
                             columns: [0, 1, 3]
                         },
-                        orientation: 'landscape',
+                        orientation: 'portrait',
                         pageSize: 'LEGAL',
                         download: 'open'
                     },

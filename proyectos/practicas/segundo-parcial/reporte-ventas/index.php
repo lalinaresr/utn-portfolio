@@ -9,7 +9,7 @@ if (isset($sales) && is_array($sales)) {
 }
 
 $styles = [
-   RESOURCES_PATH . '/css/rv.css'
+   RESOURCES_URL . '/css/rv.css'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

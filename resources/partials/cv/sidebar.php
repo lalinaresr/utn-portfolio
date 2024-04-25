@@ -1,7 +1,7 @@
 <div class="panel panel-default text-center">
     <div class="panel-body">
         <div class="pv-lg">
-            <img src="<?= RESOURCES_PATH; ?>/images/cv/default.png" class="center-block img-responsive img-circle img-thumbnail thumb180" alt="<?= APP_NAME; ?>">
+            <img src="<?= RESOURCES_URL; ?>/images/cv/default.png" class="center-block img-responsive img-circle img-thumbnail thumb180" alt="<?= APP_NAME; ?>">
         </div>
         <h3 class="m0 text-bold"><?= APP_NAME; ?></h3>
         <div>

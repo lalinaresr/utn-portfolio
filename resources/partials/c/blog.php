@@ -6,7 +6,7 @@
             <div class="new-grids">
                 <div class="col-md-6 new-grid">
                     <a href="#" class="mask">
-                        <img src="<?= RESOURCES_PATH; ?>/images/c/site/news1.jpg" class="zoom-img">
+                        <img src="<?= RESOURCES_URL; ?>/images/c/site/news1.jpg" class="zoom-img">
                     </a>
                 </div>
                 <div class="col-md-6 new-grid1">
@@ -29,13 +29,13 @@
                 </div>
                 <div class="col-md-6 new-grid">
                     <a href="#" class="mask">
-                        <img src="<?= RESOURCES_PATH; ?>/images/c/site/news2.jpg" class="zoom-img">
+                        <img src="<?= RESOURCES_URL; ?>/images/c/site/news2.jpg" class="zoom-img">
                     </a>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-md-6 new-grid">
                     <a href="#" class="mask">
-                        <img src="<?= RESOURCES_PATH; ?>/images/c/site/news3.jpg" class="zoom-img">
+                        <img src="<?= RESOURCES_URL; ?>/images/c/site/news3.jpg" class="zoom-img">
                     </a>
                 </div>
                 <div class="col-md-6 new-grid1">
@@ -58,13 +58,13 @@
                 </div>
                 <div class="col-md-6 new-grid">
                     <a href="#" class="mask">
-                        <img src="<?= RESOURCES_PATH; ?>/images/c/site/news4.jpg" class="zoom-img">
+                        <img src="<?= RESOURCES_URL; ?>/images/c/site/news4.jpg" class="zoom-img">
                     </a>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-md-6 new-grid">
                     <a href="#" class="mask">
-                        <img src="<?= RESOURCES_PATH; ?>/images/c/site/news5.jpg" class="zoom-img">
+                        <img src="<?= RESOURCES_URL; ?>/images/c/site/news5.jpg" class="zoom-img">
                     </a>
                 </div>
                 <div class="col-md-6 new-grid1">
@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-md-6 new-grid">
                     <a href="#" class="mask">
-                        <img src="<?= RESOURCES_PATH; ?>/images/c/site/news6.jpg" class="zoom-img">
+                        <img src="<?= RESOURCES_URL; ?>/images/c/site/news6.jpg" class="zoom-img">
                     </a>
                 </div>
                 <div class="clearfix"></div>

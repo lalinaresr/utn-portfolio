@@ -1,10 +1,7 @@
 <?php
-
-date_default_timezone_set('America/Mexico_City');
+require_once '../../../globals.php';
 
 const APP_NAME = 'Pizzería';
-
-const APP_AUTHOR = 'Luis Linarez <dev.lalinaresr@gmail.com>';
 
 define('CONNECTION', [
     'HOSTNAME' => 'localhost',
@@ -15,12 +12,4 @@ define('CONNECTION', [
     'SOCKET' => null
 ]);
 
-const SITE_URL = 'http://127.0.0.1:8000';
-
 const APP_URL = SITE_URL . '/proyectos/examenes/segundo-parcial/pizzeria';
-
-const RESOURCES_PATH = SITE_URL . '/resources';
-
-const PARTIALS_PATH = '../../../../resources/partials';
-
-const COMPONENTS_PATH = '../../../../resources/components';

@@ -19,6 +19,6 @@
 
 <div class="logo wow fadeIn">
     <a href="#">
-        <img src="<?= RESOURCES_PATH; ?>/images/c/site/logo.png" alt="<?= APP_NAME; ?>" title="<?= APP_NAME; ?>">
+        <img src="<?= RESOURCES_URL; ?>/images/c/site/logo.png" alt="<?= APP_NAME; ?>" title="<?= APP_NAME; ?>">
     </a>
 </div>

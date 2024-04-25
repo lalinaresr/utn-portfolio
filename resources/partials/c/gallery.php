@@ -5,53 +5,53 @@
         <div class="margin-top"></div>
         <div id="photos">
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo1.jpg">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo1.jpg">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo1.jpg">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo1.jpg">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo2.jpg">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo2.jpg">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo2.jpg">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo2.jpg">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/coffee.gif">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/coffee.gif">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/coffee.gif">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/coffee.gif">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo3.jpg">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo3.jpg">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo3.jpg">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo3.jpg">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo4.jpg">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo4.jpg">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo4.jpg">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo4.jpg">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo5.jpg">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo5.jpg">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo5.jpg">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo5.jpg">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo6.jpg">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo6.jpg">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo6.jpg">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo6.jpg">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo7.jpg">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo7.jpg">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo7.jpg">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo7.jpg">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo8.gif">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo8.gif">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo8.gif">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo8.gif">
                 </a>
             </div>
             <div class="thumbs">
-                <a href="<?= RESOURCES_PATH; ?>/images/c/site/photo9.jpg">
-                    <img src="<?= RESOURCES_PATH; ?>/images/c/site/photo9.jpg">
+                <a href="<?= RESOURCES_URL; ?>/images/c/site/photo9.jpg">
+                    <img src="<?= RESOURCES_URL; ?>/images/c/site/photo9.jpg">
                 </a>
             </div>
         </div>

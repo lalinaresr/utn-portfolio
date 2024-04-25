@@ -9,7 +9,7 @@ if (count($_POST) == 0) {
 $title = APP_NAME . ' | Verificar compra';
 
 $styles = [
-   RESOURCES_PATH . '/css/i.css'
+   RESOURCES_URL . '/css/i.css'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

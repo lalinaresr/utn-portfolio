@@ -80,7 +80,7 @@ $descuento = ((price_by_type($type) * percentage_by_brand($brand)) * even_or_odd
 echo '<tbody>
     <tr>
         <td colspan="2">
-            <img src="' . RESOURCES_PATH . "/images/td/{$brand}.png" . '" class="img-responsive center-block" width="40%" title="' . $brand . '">
+            <img src="' . RESOURCES_URL . "/images/td/{$brand}.png" . '" class="img-responsive center-block" width="40%" title="' . $brand . '">
         </td>
     </tr>
     <tr>

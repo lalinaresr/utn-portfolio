@@ -9,7 +9,7 @@ if (count($_POST) == 0) {
 $title = APP_NAME . ' | Respuesta';
 
 $styles = [
-	RESOURCES_PATH . '/css/cv.css'
+	RESOURCES_URL . '/css/cv.css'
 ];
 
 include_once PARTIALS_PATH . '/header.php';

@@ -2,7 +2,7 @@
 require_once 'config.php';
 
 $styles = [
-   RESOURCES_PATH . '/css/i.css'
+   RESOURCES_URL . '/css/i.css'
 ];
 
 include_once PARTIALS_PATH . '/header.php';
