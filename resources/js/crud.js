@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
 
     const SITE_URL = 'http://127.0.0.1:8000';
-    const APP_URL = `${SITE_URL}/practicas/segundo-parcial/crud`;
+    const APP_URL = `${SITE_URL}/proyectos/practicas/segundo-parcial/crud`;
     const STORE = `${APP_URL}/projects/store.php`;
     const FIND = `${APP_URL}/projects/find.php`;
     const UPDATE = `${APP_URL}/projects/update.php`;
